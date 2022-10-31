@@ -10,4 +10,4 @@ To understand what the tables mean:
 "default" means running Calyx normally (i.e., with infer share enabled). 
 
 For these resource estimates, combinational components are never shared. 
-"x,y" menas that registers are shared x times and other types of cells are shared y times. -1 means that cells are always shared. 
+"x,y" menas that registers are shared x times and other types of cells are shared y times. -1 means that cells are always shared. So "-1,-1", for example, means that cells are always shared. 
