@@ -96,14 +96,3 @@ if __name__ == "__main__":
     end = time.time()
     time_consumed=end-start
     write_to_file(timing_file, str(time_consumed) + "\n")
-
-
-        
-
-
-
-
-
-  
-
-        

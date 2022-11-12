@@ -1,0 +1,15 @@
+{
+  "files": [
+    "small-ex.futil"
+  ],
+  "bounds": [
+    1,
+    4
+  ],
+  "settings": [
+    "no-infer-share",
+    "default"
+  ],
+  "output-dir": "small-results",
+  "synth-file": "synth.tcl"
+}
