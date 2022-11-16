@@ -1,15 +1,17 @@
 {
   "files": [
-    "small-ex/small-ex.futil"
+    "nn-designs/google.futil",
+    "nn-designs/mobile.futil"
   ],
   "bounds": [
     1,
-    4
+    4,
+    -1
   ],
   "settings": [
     "no-infer-share",
     "default"
   ],
-  "output-dir": "small-results",
+  "output-dir": "big-nn",
   "synth-file": "synth.tcl"
 }

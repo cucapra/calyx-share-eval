@@ -1,3 +1,5 @@
+// small example, mainly to check that scripts are behaving correctly 
+
 import "primitives/core.futil";
 import "primitives/unsynthesizable.futil";
 import "primitives/binary_operators.futil";

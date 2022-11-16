@@ -6,9 +6,8 @@ import subprocess
 import time 
 '''
 Reads in a JSON and runs resource estimates. 
-I also tried to get it to write the error message, commands run, and time taken, 
-into .txt files, but it doesn't work currently since I am just overwriting 
-what was previously in the file each time I try to write. 
+Also, records the commnands run in the terminal, as well as an "errors" file 
+that tells you any errors that occured, and whether each simulation meets timing. 
 However, the resource usage runs correctly. 
 The json input needs: 
 "files": list of files 
@@ -24,19 +23,20 @@ def write_to_file(file_dest, s):
   '''
   writes s to file_dest
   '''
-  with open(file_dest, "w") as fd:
+  with open(file_dest, "a") as fd:
     fd.write(s)
+    fd.write("\n")
 
 def run_command(command, commands_file):
   '''
-  runs command on terminal, and writes to file 
+  runs command on terminal, and writes the command it ran to file 
   '''
   try: 
     output = subprocess.check_output(command, shell=True)
     write_to_file(commands_file, command + "\n")
   except subprocess.CalledProcessError as exc:
     error_str = "Status : FAIL " + str(exc.returncode) + " "+ str(exc.output)
-    write_to_file(errors_file,error_str)
+    write_to_file(errors_file, error_str)
 
 if __name__ == "__main__":
   assert (len(sys.argv) == 2), "please provide an input json file name"
@@ -53,18 +53,26 @@ if __name__ == "__main__":
   synth_file_flag = f"-s synth-verilog.tcl {synth_file}"
 
   # making the output directory that stores our results 
-  # if it already exists then overwrite 
+  # (if it already exists then overwrite)
   if os.path.exists(output_dir):
     shutil.rmtree(output_dir)
   os.makedirs(output_dir)
   resource_files_path = os.path.join(output_dir, "resource-estimates")
   os.makedirs(resource_files_path)
+  
+  # timing file keeps of how long each simulation takes 
   timing_file = os.path.join(output_dir, "time.txt")
+  # commands file is just a list of the commands that we ran in the terminal 
+  # this is mostly helpful for debugging purposes
   commands_file = os.path.join(output_dir, "commands_run.txt")
+  # errors file stores any errors found while executing command line, including 
+  # whether timing is met 
   errors_file = os.path.join(output_dir, "errors.txt")
 
+  # f is the futil file that we run resource estimations on. 
   for f in files:
     start = time.time() 
+    # big_json is a json that stores all of the resource estimates for this design 
     big_json = {}
     for s in settings:
       assert s in settings_supported, f"setting is not supported. Must be one of {settings_supported}"
@@ -74,8 +82,10 @@ if __name__ == "__main__":
       big_json[s] = {}
       for b in bounds:
         futil_flags = f'-s futil.flags "{settings_flag} -x cell-share:bounds=1,{b},{b}"'
-        run_info = f.replace(".","_") + "_" + str(b) + "_" + s
+        run_info = f.replace(".","_").replace("/", "_") + "_" + str(b) + "_" + s
+        # where to put the full synth-files directory 
         synth_files_directory = os.path.join(output_dir,run_info) 
+        # where to put the resource estimates json 
         resource_estimates_file = os.path.join(resource_files_path, run_info + ".json")
 
         # first get synth_files (they can be helpful to look at)
@@ -89,10 +99,13 @@ if __name__ == "__main__":
         # all the data we want in it 
         json_data = json.load(open(resource_estimates_file))
         big_json[s][f"{b},{b}"] = json_data
+        if json_data["meet_timing"] != 1:
+          write_to_file(errors_file,f"""{run_info} does not meet timing""")
+          
 
-    full_resource_file = os.path.join(output_dir,"resource_numbers_" + f + ".json")
+    full_resource_file = os.path.join(output_dir,"resource_numbers_" + f.replace(".","_").replace("/", "_") + ".json")
     write_to_file(full_resource_file, json.dumps(big_json))
     
     end = time.time()
     time_consumed=end-start
-    write_to_file(timing_file, str(time_consumed) + "\n")
+    write_to_file(timing_file, str(time_consumed))

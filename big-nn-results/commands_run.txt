@@ -1,0 +1,48 @@
+fud e --to synth-files nn-designs/google.futil -o big-nn/nn-designs_google_futil_1_no-infer-share -s synth-verilog.tcl synth.tcl -s futil.flags "-d infer-share -x cell-share:bounds=1,1,1"
+
+fud e --to resource-estimate --from synth-files big-nn/nn-designs_google_futil_1_no-infer-share > big-nn/resource-estimates/nn-designs_google_futil_1_no-infer-share.json
+
+fud e --to synth-files nn-designs/google.futil -o big-nn/nn-designs_google_futil_4_no-infer-share -s synth-verilog.tcl synth.tcl -s futil.flags "-d infer-share -x cell-share:bounds=1,4,4"
+
+fud e --to resource-estimate --from synth-files big-nn/nn-designs_google_futil_4_no-infer-share > big-nn/resource-estimates/nn-designs_google_futil_4_no-infer-share.json
+
+fud e --to synth-files nn-designs/google.futil -o big-nn/nn-designs_google_futil_-1_no-infer-share -s synth-verilog.tcl synth.tcl -s futil.flags "-d infer-share -x cell-share:bounds=1,-1,-1"
+
+fud e --to resource-estimate --from synth-files big-nn/nn-designs_google_futil_-1_no-infer-share > big-nn/resource-estimates/nn-designs_google_futil_-1_no-infer-share.json
+
+fud e --to synth-files nn-designs/google.futil -o big-nn/nn-designs_google_futil_1_default -s synth-verilog.tcl synth.tcl -s futil.flags " -x cell-share:bounds=1,1,1"
+
+fud e --to resource-estimate --from synth-files big-nn/nn-designs_google_futil_1_default > big-nn/resource-estimates/nn-designs_google_futil_1_default.json
+
+fud e --to synth-files nn-designs/google.futil -o big-nn/nn-designs_google_futil_4_default -s synth-verilog.tcl synth.tcl -s futil.flags " -x cell-share:bounds=1,4,4"
+
+fud e --to resource-estimate --from synth-files big-nn/nn-designs_google_futil_4_default > big-nn/resource-estimates/nn-designs_google_futil_4_default.json
+
+fud e --to synth-files nn-designs/google.futil -o big-nn/nn-designs_google_futil_-1_default -s synth-verilog.tcl synth.tcl -s futil.flags " -x cell-share:bounds=1,-1,-1"
+
+fud e --to resource-estimate --from synth-files big-nn/nn-designs_google_futil_-1_default > big-nn/resource-estimates/nn-designs_google_futil_-1_default.json
+
+fud e --to synth-files nn-designs/mobile.futil -o big-nn/nn-designs_mobile_futil_1_no-infer-share -s synth-verilog.tcl synth.tcl -s futil.flags "-d infer-share -x cell-share:bounds=1,1,1"
+
+fud e --to resource-estimate --from synth-files big-nn/nn-designs_mobile_futil_1_no-infer-share > big-nn/resource-estimates/nn-designs_mobile_futil_1_no-infer-share.json
+
+fud e --to synth-files nn-designs/mobile.futil -o big-nn/nn-designs_mobile_futil_4_no-infer-share -s synth-verilog.tcl synth.tcl -s futil.flags "-d infer-share -x cell-share:bounds=1,4,4"
+
+fud e --to resource-estimate --from synth-files big-nn/nn-designs_mobile_futil_4_no-infer-share > big-nn/resource-estimates/nn-designs_mobile_futil_4_no-infer-share.json
+
+fud e --to synth-files nn-designs/mobile.futil -o big-nn/nn-designs_mobile_futil_-1_no-infer-share -s synth-verilog.tcl synth.tcl -s futil.flags "-d infer-share -x cell-share:bounds=1,-1,-1"
+
+fud e --to resource-estimate --from synth-files big-nn/nn-designs_mobile_futil_-1_no-infer-share > big-nn/resource-estimates/nn-designs_mobile_futil_-1_no-infer-share.json
+
+fud e --to synth-files nn-designs/mobile.futil -o big-nn/nn-designs_mobile_futil_1_default -s synth-verilog.tcl synth.tcl -s futil.flags " -x cell-share:bounds=1,1,1"
+
+fud e --to resource-estimate --from synth-files big-nn/nn-designs_mobile_futil_1_default > big-nn/resource-estimates/nn-designs_mobile_futil_1_default.json
+
+fud e --to synth-files nn-designs/mobile.futil -o big-nn/nn-designs_mobile_futil_4_default -s synth-verilog.tcl synth.tcl -s futil.flags " -x cell-share:bounds=1,4,4"
+
+fud e --to resource-estimate --from synth-files big-nn/nn-designs_mobile_futil_4_default > big-nn/resource-estimates/nn-designs_mobile_futil_4_default.json
+
+fud e --to synth-files nn-designs/mobile.futil -o big-nn/nn-designs_mobile_futil_-1_default -s synth-verilog.tcl synth.tcl -s futil.flags " -x cell-share:bounds=1,-1,-1"
+
+fud e --to resource-estimate --from synth-files big-nn/nn-designs_mobile_futil_-1_default > big-nn/resource-estimates/nn-designs_mobile_futil_-1_default.json
+

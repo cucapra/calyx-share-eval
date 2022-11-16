@@ -1,0 +1,4 @@
+6033.688938856125 = approx 1.68 hours for 6 alexnet simulations 
+3437.1125020980835 = approx .955 hours for 6 lenet simulations 
+7389.774072408676 = approx 2.05 hours for 6 squeezenet simulations 
+5669.963576078415 = approx 1.57 hours for 6 vgg simulations 
