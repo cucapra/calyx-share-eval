@@ -3,12 +3,11 @@
     "small-ex/small-ex.futil"
   ],
   "bounds": [
-    1,
     4
   ],
   "settings": [
-    "no-infer-share",
-    "default"
+    "default",
+    "fully-inline"
   ],
   "output-dir": "small-results",
   "synth-file": "synth.tcl"

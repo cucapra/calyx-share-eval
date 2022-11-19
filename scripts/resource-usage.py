@@ -17,11 +17,24 @@ The json input needs:
 "synth-file": the synthesis file 
 '''
 
-settings_supported = ["no-infer-share", "default"]
+supported_files = ["google", "lenet", "alex", "squeeze", "vgg", "mobile"]
+settings_supported = ["no-infer-share", "default", "fully-inline"]
+
+supported_files = ["google", "lenet", "alex", "squeeze", "vgg", "mobile"]
+
+def simplify_file_name(old_file_name):
+  '''
+  renames compilcated file names for nn designs to simpler ones. 
+  e.g. "nn-designs_alex_futil" -> "alex"
+  '''
+  for possible_new_name in supported_files:
+    if possible_new_name in old_file_name:
+      return possible_new_name 
+  return old_file_name.replace("/","_").replace(".", "_") 
 
 def write_to_file(file_dest, s):
   '''
-  writes s to file_dest
+  writes string s to file_dest
   '''
   with open(file_dest, "a") as fd:
     fd.write(s)
@@ -32,7 +45,7 @@ def run_command(command, commands_file):
   runs command on terminal, and writes the command it ran to file 
   '''
   try: 
-    output = subprocess.check_output(command, shell=True)
+    subprocess.check_output(command, shell=True)
     write_to_file(commands_file, command + "\n")
   except subprocess.CalledProcessError as exc:
     error_str = "Status : FAIL " + str(exc.returncode) + " "+ str(exc.output)
@@ -71,18 +84,21 @@ if __name__ == "__main__":
 
   # f is the futil file that we run resource estimations on. 
   for f in files:
-    start = time.time() 
+    os.system(f"tmux new -s {simplify_file_name(f)}")
     # big_json is a json that stores all of the resource estimates for this design 
     big_json = {}
     for s in settings:
       assert s in settings_supported, f"setting is not supported. Must be one of {settings_supported}"
       settings_flag = ""
       if s == "no-infer-share":
-        settings_flag = '-d infer-share'   
+        settings_flag = '-d infer-share' 
+      elif s == "fully-inline":
+        settings_flag = '-x inline:always' 
       big_json[s] = {}
       for b in bounds:
+        start = time.time() 
         futil_flags = f'-s futil.flags "{settings_flag} -x cell-share:bounds=1,{b},{b}"'
-        run_info = f.replace(".","_").replace("/", "_") + "_" + str(b) + "_" + s
+        run_info = simplify_file_name(f) + "_" + str(b) + "_" + s
         # where to put the full synth-files directory 
         synth_files_directory = os.path.join(output_dir,run_info) 
         # where to put the resource estimates json 
@@ -101,11 +117,13 @@ if __name__ == "__main__":
         big_json[s][f"{b},{b}"] = json_data
         if json_data["meet_timing"] != 1:
           write_to_file(errors_file,f"""{run_info} does not meet timing""")
-          
-
-    full_resource_file = os.path.join(output_dir,"resource_numbers_" + f.replace(".","_").replace("/", "_") + ".json")
+        
+        end = time.time()
+        time_consumed=end-start
+        time_str = run_info + ": " + str(time_consumed/60) + " minutes"
+        write_to_file(timing_file, time_str)
+    
+    full_resource_file = os.path.join(output_dir,"resource_numbers_" + simplify_file_name(f) + ".json")
     write_to_file(full_resource_file, json.dumps(big_json))
     
-    end = time.time()
-    time_consumed=end-start
-    write_to_file(timing_file, str(time_consumed))
+    

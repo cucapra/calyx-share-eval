@@ -3,6 +3,8 @@ import os
 import sys 
 
 # Short script that times how long it takes to turn a .futil file into synth files 
+# mostly used to get a quick estimate of how long things will take when we try to 
+# get resource numbers 
 
 start = time.time() 
 
