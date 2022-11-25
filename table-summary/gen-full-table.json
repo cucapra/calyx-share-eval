@@ -10,5 +10,5 @@
   "stats": [
     "all"
   ],
-  "output_file": "table-summary/key-stats-table.csv"
+  "output_file": "table-summary/full-table.csv"
 }
