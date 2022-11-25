@@ -9,8 +9,8 @@
   ],
   "settings": [
     "fully-inline",
-    "no-infer-share",
-    "default"
+    "default",
+    "no-infer-share"
   ],
   "output-dir": "results/google",
   "synth-file": "synth.tcl",
