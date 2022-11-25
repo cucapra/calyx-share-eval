@@ -1,0 +1,13 @@
+{
+  "files": [
+    "small-results/small/resource_numbers_small-ex_small-ex_futil.json",
+    "small-results/small2/resource_numbers_small-ex_small-ex2_futil.json"
+  ],
+  "stats": [
+    "all",
+    "lut",
+    "dsp",
+    "registers"
+  ],
+  "output_file": "small-ex/small-ex.csv"
+}

@@ -1,0 +1,14 @@
+{
+  "files": [
+    "results-varying-clock-periods/alex/resource_numbers_alex.json",
+    "results-varying-clock-periods/google/resource_numbers_google.json",
+    "results-varying-clock-periods/lenet/resource_numbers_lenet.json",
+    "results-varying-clock-periods/mobile/resource_numbers_mobile.json",
+    "results-varying-clock-periods/squeeze/resource_numbers_squeeze.json",
+    "results-varying-clock-periods/vgg/resource_numbers_vgg.json"
+  ],
+  "stats": [
+    "all"
+  ],
+  "output_file": "table-summary/key-stats-table.csv"
+}

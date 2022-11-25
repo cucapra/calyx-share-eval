@@ -1,6 +1,6 @@
 {
   "files": [
-    "small-ex/small-ex.futil"
+    "small-ex/small-ex2.futil"
   ],
   "bounds": [
     4
@@ -9,6 +9,6 @@
     "default",
     "fully-inline"
   ],
-  "output-dir": "small-results/small",
+  "output-dir": "small-results/small2",
   "synth-file": "synth.tcl"
 }

@@ -1,0 +1,14 @@
+{
+  "files": [
+    "nn-designs/vgg.futil"
+  ],
+  "bounds": [
+    4
+  ],
+  "settings": [
+    "fully-inline"
+  ],
+  "output-dir": "vgg4",
+  "synth-file": "synth.tcl",
+  "device": "device20.xdc"
+}

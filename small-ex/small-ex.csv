@@ -1,0 +1,5 @@
+setting,"lut_4,4","dsp_4,4","registers_4,4","muxes_4,4","clb_registers_4,4","carry8_4,4","f7_muxes_4,4","f8_muxes_4,4","f9_muxes_4,4","clb_4,4","meet_timing_4,4","worst_slack_4,4","period_4,4","frequency_4,4","uram_4,4","cell_lut1_4,4","cell_lut2_4,4","cell_lut3_4,4","cell_lut4_4,4","cell_lut5_4,4","cell_lut6_4,4","cell_fdre_4,4"
+small-results_small_resource_numbers_small-ex_small-ex_futil_json_default,17,0,14,15,9,0,0,0,0,26,1,7.843,9.0,111.111,-1,-1,2,-1,3,5,10,9
+small-results_small_resource_numbers_small-ex_small-ex_futil_json_fully-inline,15,0,14,11,9,0,0,0,0,24,1,7.751,9.0,111.111,-1,-1,3,1,3,2,10,9
+small-results_small2_resource_numbers_small-ex_small-ex2_futil_json_default,17,0,14,15,9,0,0,0,0,26,1,7.843,9.0,111.111,-1,-1,2,-1,3,5,10,9
+small-results_small2_resource_numbers_small-ex_small-ex2_futil_json_fully-inline,15,0,14,11,9,0,0,0,0,24,1,7.751,9.0,111.111,-1,-1,3,1,3,2,10,9

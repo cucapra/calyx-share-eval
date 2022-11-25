@@ -1,0 +1,18 @@
+{
+  "files": [
+    "nn-designs/squeeze.futil"
+  ],
+  "bounds": [
+    1,
+    4,
+    -1
+  ],
+  "settings": [
+    "fully-inline",
+    "no-infer-share",
+    "default"
+  ],
+  "output-dir": "results/squeeze",
+  "synth-file": "synth.tcl",
+  "device": "device14.xdc"
+}

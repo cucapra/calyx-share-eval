@@ -1,0 +1,15 @@
+google_1_fully-inline: 312.5746139446894 minutes // running with others, clock cycle = 14 
+google_1_fully-inline: 113.91194952726364 minutes // running alone, clock cycle = 26
+
+google_4_fully-inline: 84.97598623037338 minutes // running with others, clock cycle = 14 
+google_4_fully-inline: 73.45710398753484 minutes // running alone, clock cycle = 20
+
+google_-1_fully-inline: 108.54594690004984 minutes // running with others, clock cycle = 14 
+google_-1_fully-inline: 87.02868421077729 minutes // running alone, clock cycle = 20 
+
+google_1_no-infer-share: 62.249141204357144 minutes
+google_4_no-infer-share: 62.389504345258075 minutes
+google_-1_no-infer-share: 61.401686179637906 minutes
+google_1_default: 59.20316838423411 minutes
+google_4_default: 57.3667843023936 minutes
+google_-1_default: 55.86287908554077 minutes

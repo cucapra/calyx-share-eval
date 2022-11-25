@@ -1,2 +1,0 @@
-25616.827724695206 = approx 7.11 hours for 6 googlenet simulations 
-15576.883263587952 = spprox 4.327 hours for 6 mobilenet simulation 

@@ -1,0 +1,18 @@
+{
+  "files": [
+    "nn-designs/lenet.futil"
+  ],
+  "bounds": [
+    1,
+    4,
+    -1
+  ],
+  "settings": [
+    "fully-inline",
+    "no-infer-share",
+    "default"
+  ],
+  "output-dir": "results2/lenet",
+  "synth-file": "synth.tcl",
+  "device": "device10.xdc"
+}

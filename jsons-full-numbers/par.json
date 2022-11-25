@@ -1,0 +1,10 @@
+{
+  "files": [
+    "jsons/alex.json",
+    "jsons/google.json",
+    "jsons/lenet.json",
+    "jsons/mobile.json",
+    "jsons/squeeze.json",
+    "jsons/vgg.json"
+  ]
+}
