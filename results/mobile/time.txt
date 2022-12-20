@@ -1,0 +1,9 @@
+mobile_1_fully-inline: 43.54460275173187 minutes
+mobile_4_fully-inline: 28.917014114061992 minutes
+mobile_-1_fully-inline: 27.260155622164408 minutes
+mobile_1_default: 43.12097582419713 minutes
+mobile_4_default: 36.8223405679067 minutes
+mobile_-1_default: 35.43696783781051 minutes
+mobile_1_no-infer-share: 39.36449539264043 minutes
+mobile_4_no-infer-share: 40.94526482820511 minutes
+mobile_-1_no-infer-share: 40.29542408784231 minutes

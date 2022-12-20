@@ -1,0 +1,36 @@
+fud e --to synth-files nn-designs/lenet.futil -o results/lenet/lenet_1_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-x inline:always -x inline:new-fsms  -d group2invoke -x cell-share:bounds=1,1,1"
+
+fud e --to resource-estimate --from synth-files results/lenet/lenet_1_fully-inline > results/lenet/resource-estimates/lenet_1_fully-inline.json
+
+fud e --to synth-files nn-designs/lenet.futil -o results/lenet/lenet_4_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-x inline:always -x inline:new-fsms  -d group2invoke -x cell-share:bounds=1,4,4"
+
+fud e --to resource-estimate --from synth-files results/lenet/lenet_4_fully-inline > results/lenet/resource-estimates/lenet_4_fully-inline.json
+
+fud e --to synth-files nn-designs/lenet.futil -o results/lenet/lenet_-1_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-x inline:always -x inline:new-fsms  -d group2invoke -x cell-share:bounds=1,-1,-1"
+
+fud e --to resource-estimate --from synth-files results/lenet/lenet_-1_fully-inline > results/lenet/resource-estimates/lenet_-1_fully-inline.json
+
+fud e --to synth-files nn-designs/lenet.futil -o results/lenet/lenet_1_default -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -x cell-share:bounds=1,1,1"
+
+fud e --to resource-estimate --from synth-files results/lenet/lenet_1_default > results/lenet/resource-estimates/lenet_1_default.json
+
+fud e --to synth-files nn-designs/lenet.futil -o results/lenet/lenet_4_default -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -x cell-share:bounds=1,4,4"
+
+fud e --to resource-estimate --from synth-files results/lenet/lenet_4_default > results/lenet/resource-estimates/lenet_4_default.json
+
+fud e --to synth-files nn-designs/lenet.futil -o results/lenet/lenet_-1_default -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -x cell-share:bounds=1,-1,-1"
+
+fud e --to resource-estimate --from synth-files results/lenet/lenet_-1_default > results/lenet/resource-estimates/lenet_-1_default.json
+
+fud e --to synth-files nn-designs/lenet.futil -o results/lenet/lenet_1_no-infer-share -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-d infer-share -x cell-share:bounds=1,1,1"
+
+fud e --to resource-estimate --from synth-files results/lenet/lenet_1_no-infer-share > results/lenet/resource-estimates/lenet_1_no-infer-share.json
+
+fud e --to synth-files nn-designs/lenet.futil -o results/lenet/lenet_4_no-infer-share -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-d infer-share -x cell-share:bounds=1,4,4"
+
+fud e --to resource-estimate --from synth-files results/lenet/lenet_4_no-infer-share > results/lenet/resource-estimates/lenet_4_no-infer-share.json
+
+fud e --to synth-files nn-designs/lenet.futil -o results/lenet/lenet_-1_no-infer-share -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-d infer-share -x cell-share:bounds=1,-1,-1"
+
+fud e --to resource-estimate --from synth-files results/lenet/lenet_-1_no-infer-share > results/lenet/resource-estimates/lenet_-1_no-infer-share.json
+

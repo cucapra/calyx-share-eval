@@ -8,11 +8,9 @@
     -1
   ],
   "settings": [
-    "fully-inline",
-    "no-infer-share",
-    "default"
+    "fully-inline"
   ],
   "output-dir": "results2/lenet",
   "synth-file": "synth.tcl",
-  "device": "device10.xdc"
+  "device": "device26.xdc"
 }

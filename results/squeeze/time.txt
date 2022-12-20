@@ -1,0 +1,9 @@
+squeeze_1_fully-inline: 22.57623057762782 minutes
+squeeze_4_fully-inline: 20.806362044811248 minutes
+squeeze_-1_fully-inline: 19.22774674097697 minutes
+squeeze_1_default: 24.377363487084708 minutes
+squeeze_4_default: 23.687252163887024 minutes
+squeeze_-1_default: 23.254892031351726 minutes
+squeeze_1_no-infer-share: 23.984421133995056 minutes
+squeeze_4_no-infer-share: 24.52181602716446 minutes
+squeeze_-1_no-infer-share: 23.750414061546326 minutes

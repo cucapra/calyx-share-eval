@@ -4,12 +4,13 @@
   ],
   "bounds": [
     1,
-    4
+    4,
+    -1
   ],
   "settings": [
     "fully-inline"
   ],
-  "output-dir": "squeeze14",
+  "output-dir": "results2/squeeze",
   "synth-file": "synth.tcl",
-  "device": "device20.xdc"
+  "device": "device26.xdc"
 }

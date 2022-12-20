@@ -1,10 +1,10 @@
 {
   "files": [
-    "jsons2/alex.json",
-    "jsons2/google.json",
-    "jsons2/lenet.json",
-    "jsons2/mobile.json",
-    "jsons2/squeeze.json",
-    "jsons2/vgg.json"
+    "jsons-partial-numbers/alex.json",
+    "jsons-partial-numbers/google.json",
+    "jsons-partial-numbers/lenet.json",
+    "jsons-partial-numbers/mobile.json",
+    "jsons-partial-numbers/squeeze.json",
+    "jsons-partial-numbers/vgg.json"
   ]
 }

@@ -1,0 +1,9 @@
+alex_1_fully-inline: 24.109959256649017 minutes
+alex_4_fully-inline: 19.324625380833943 minutes
+alex_-1_fully-inline: 17.58495260477066 minutes
+alex_1_default: 17.68037040233612 minutes
+alex_4_default: 16.36694817940394 minutes
+alex_-1_default: 17.09027304649353 minutes
+alex_1_no-infer-share: 17.699345695972443 minutes
+alex_4_no-infer-share: 16.74194260040919 minutes
+alex_-1_no-infer-share: 17.28845348358154 minutes

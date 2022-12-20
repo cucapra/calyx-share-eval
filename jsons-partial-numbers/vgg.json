@@ -3,12 +3,14 @@
     "nn-designs/vgg.futil"
   ],
   "bounds": [
-    4
+    1,
+    4,
+    -1
   ],
   "settings": [
     "fully-inline"
   ],
-  "output-dir": "vgg4",
+  "output-dir": "results2/vgg",
   "synth-file": "synth.tcl",
-  "device": "device20.xdc"
+  "device": "device26.xdc"
 }

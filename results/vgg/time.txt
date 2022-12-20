@@ -1,0 +1,9 @@
+vgg_1_fully-inline: 22.226703723271687 minutes
+vgg_4_fully-inline: 15.25298867225647 minutes
+vgg_-1_fully-inline: 15.211389823754628 minutes
+vgg_1_default: 16.75310272773107 minutes
+vgg_4_default: 15.417271423339844 minutes
+vgg_-1_default: 14.887822167078655 minutes
+vgg_1_no-infer-share: 16.34208327929179 minutes
+vgg_4_no-infer-share: 16.07436704238256 minutes
+vgg_-1_no-infer-share: 15.957035899162292 minutes

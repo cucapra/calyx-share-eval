@@ -1,0 +1,18 @@
+{
+  "files": [
+    "nn-designs/alex.futil"
+  ],
+  "bounds": [
+    1,
+    4,
+    -1
+  ],
+  "settings": [
+    "fully-inline",
+    "default",
+    "no-infer-share"
+  ],
+  "output-dir": "results/alex",
+  "synth-file": "synth.tcl",
+  "device": "device10.xdc"
+}

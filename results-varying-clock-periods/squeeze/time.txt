@@ -1,9 +1,0 @@
-squeeze_1_fully-inline: 98.80552371740342 minutes // this synthesis did not meet timing so I redid it, forgot to get the timing numbers 
-squeeze_4_fully-inline: 99.43964276313781 minutes // this synthesis did not meet timing so I redid it, forgot to get the timing numbers 
-squeeze_-1_fully-inline: 62.88635383844375 minutes
-squeeze_1_no-infer-share: 34.06432770093282 minutes
-squeeze_4_no-infer-share: 23.57136547168096 minutes
-squeeze_-1_no-infer-share: 21.909255111217497 minutes
-squeeze_1_default: 20.966780642668407 minutes
-squeeze_4_default: 21.017169868946077 minutes
-squeeze_-1_default: 22.634708249568938 minutes

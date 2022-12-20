@@ -55,7 +55,7 @@ if __name__ == "__main__":
         json_data = json.load(json_file)
         for share_setting in json_data:
           cur_row = [f"{simplify_file_name(f)}_{share_setting}"]
-          # need to ceep cur_row_data as nested list so it appears in a more 
+          # need to keep cur_row_data as nested list so it appears in a more 
           # intuitive order in the csv file 
           cur_row_data = list(([] for _ in stats))
           header_data = list(([] for _ in stats))
@@ -67,6 +67,8 @@ if __name__ == "__main__":
           cur_row += flatten(cur_row_data)
           rows.append(cur_row)
           if need_header_info:
+            # the csv file only needs one header, so once we have the header info 
+            # needed, we don't need to collect it again 
             header += flatten(header_data)
             need_header_info = False 
 

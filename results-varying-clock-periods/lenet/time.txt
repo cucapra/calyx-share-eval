@@ -1,9 +1,0 @@
-lenet_1_fully-inline: 21.32738769054413 minutes
-lenet_4_fully-inline: 19.759055018424988 minutes
-lenet_-1_fully-inline: 17.825663713614144 minutes
-lenet_1_no-infer-share: 21.38590899705887 minutes
-lenet_4_no-infer-share: 22.124109772841134 minutes
-lenet_-1_no-infer-share: 21.235915875434877 minutes
-lenet_1_default: 21.125325413544974 minutes
-lenet_4_default: 18.819871568679808 minutes
-lenet_-1_default: 18.690527323881785 minutes

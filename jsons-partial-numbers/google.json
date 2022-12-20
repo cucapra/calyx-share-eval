@@ -3,12 +3,14 @@
     "nn-designs/google.futil"
   ],
   "bounds": [
-    1
+    1,
+    4,
+    -1
   ],
   "settings": [
     "fully-inline"
   ],
-  "output-dir": "google1",
+  "output-dir": "results2/google",
   "synth-file": "synth.tcl",
   "device": "device26.xdc"
 }
