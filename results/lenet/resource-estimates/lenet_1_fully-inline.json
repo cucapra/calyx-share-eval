@@ -2,7 +2,7 @@
   "lut": 9965,
   "dsp": 152,
   "registers": 1140,
-  "muxes": 1270,
+  "muxes": 1268,
   "clb_registers": 6514,
   "carry8": 542,
   "f7_muxes": 0,
