@@ -3,14 +3,14 @@
     "nn-designs/mobile.futil"
   ],
   "bounds": [
-    -1,
     1,
-    4
+    4,
+    -1
   ],
   "settings": [
-    "no-infer-share",
+    "fully-inline",
     "default",
-    "fully-inline"
+    "no-infer-share"
   ],
   "output-dir": "results/mobile",
   "synth-file": "synth.tcl",
