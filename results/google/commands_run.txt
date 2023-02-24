@@ -1,12 +1,12 @@
-fud e --to synth-files nn-designs/google.futil -o results/google/google_1_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-x inline:always -x inline:new-fsms  -d group2invoke -x cell-share:bounds=1,1,1"
+fud e --to synth-files nn-designs/google.futil -o results/google/google_1_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-x inline:always -x inline:new-fsms  -d group2invoke -d tdst -x cell-share:bounds=1,1,1"
 
 fud e --to resource-estimate --from synth-files results/google/google_1_fully-inline > results/google/resource-estimates/google_1_fully-inline.json
 
-fud e --to synth-files nn-designs/google.futil -o results/google/google_4_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-x inline:always -x inline:new-fsms  -d group2invoke -x cell-share:bounds=1,4,4"
+fud e --to synth-files nn-designs/google.futil -o results/google/google_4_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-x inline:always -x inline:new-fsms  -d group2invoke -d tdst -x cell-share:bounds=1,4,4"
 
 fud e --to resource-estimate --from synth-files results/google/google_4_fully-inline > results/google/resource-estimates/google_4_fully-inline.json
 
-fud e --to synth-files nn-designs/google.futil -o results/google/google_-1_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-x inline:always -x inline:new-fsms  -d group2invoke -x cell-share:bounds=1,-1,-1"
+fud e --to synth-files nn-designs/google.futil -o results/google/google_-1_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-x inline:always -x inline:new-fsms  -d group2invoke -d tdst -x cell-share:bounds=1,-1,-1"
 
 fud e --to resource-estimate --from synth-files results/google/google_-1_fully-inline > results/google/resource-estimates/google_-1_fully-inline.json
 

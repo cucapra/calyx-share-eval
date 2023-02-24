@@ -1,12 +1,12 @@
-fud e --to synth-files nn-designs/squeeze.futil -o results/squeeze/squeeze_1_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-x inline:always -x inline:new-fsms  -d group2invoke -x cell-share:bounds=1,1,1"
+fud e --to synth-files nn-designs/squeeze.futil -o results/squeeze/squeeze_1_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-x inline:always -x inline:new-fsms  -d group2invoke -d tdst -x cell-share:bounds=1,1,1"
 
 fud e --to resource-estimate --from synth-files results/squeeze/squeeze_1_fully-inline > results/squeeze/resource-estimates/squeeze_1_fully-inline.json
 
-fud e --to synth-files nn-designs/squeeze.futil -o results/squeeze/squeeze_4_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-x inline:always -x inline:new-fsms  -d group2invoke -x cell-share:bounds=1,4,4"
+fud e --to synth-files nn-designs/squeeze.futil -o results/squeeze/squeeze_4_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-x inline:always -x inline:new-fsms  -d group2invoke -d tdst -x cell-share:bounds=1,4,4"
 
 fud e --to resource-estimate --from synth-files results/squeeze/squeeze_4_fully-inline > results/squeeze/resource-estimates/squeeze_4_fully-inline.json
 
-fud e --to synth-files nn-designs/squeeze.futil -o results/squeeze/squeeze_-1_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-x inline:always -x inline:new-fsms  -d group2invoke -x cell-share:bounds=1,-1,-1"
+fud e --to synth-files nn-designs/squeeze.futil -o results/squeeze/squeeze_-1_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-x inline:always -x inline:new-fsms  -d group2invoke -d tdst -x cell-share:bounds=1,-1,-1"
 
 fud e --to resource-estimate --from synth-files results/squeeze/squeeze_-1_fully-inline > results/squeeze/resource-estimates/squeeze_-1_fully-inline.json
 

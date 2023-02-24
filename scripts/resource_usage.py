@@ -60,7 +60,7 @@ def run_synthesis(files, settings, bounds, output_dir, synth_file_flag, device_f
       if s == "no-infer-share":
         settings_flag = '-d infer-share' 
       elif s == "fully-inline":
-        settings_flag = '-x inline:always -x inline:new-fsms  -d group2invoke' 
+        settings_flag = '-x inline:always -x inline:new-fsms  -d group2invoke -d tdst' 
       big_json[s] = {}
       for b in bounds:
         start = time.time() 
