@@ -1,14 +1,7 @@
-import shutil 
-import os 
-import json 
-import sys 
-import subprocess 
-import time 
 '''
 Reads in a JSON and runs resource estimates. 
 Also, records the commnands run in the terminal, as well as an "errors" file 
 that tells you any errors that occured, and whether each simulation meets timing. 
-However, the resource usage runs correctly. 
 The json input needs: 
 "files": list of files 
 "bounds": list of bounds. 
@@ -16,6 +9,13 @@ The json input needs:
 "output-dir": the output directory 
 "synth-file": the synthesis file 
 '''
+
+import shutil 
+import os 
+import json 
+import sys 
+import subprocess 
+import time 
 
 supported_files = ["google", "lenet", "alex", "squeeze", "vgg", "mobile"]
 settings_supported = ["no-infer-share", "default", "fully-inline"]

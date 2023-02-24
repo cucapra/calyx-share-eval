@@ -1,3 +1,15 @@
+'''
+Simple script to support parallel exeuction of scripts/resource_usage.py 
+Reads in a json file, which itself contains paths to jsons to run scripts/resource_usage.py 
+on. 
+In other words, the json file that this script take in is: 
+files: {
+  "path/to/json/to/run/resource_usage.py", 
+  "another/path/to/json/to/run/resource_usage.py", 
+  ...
+}
+'''
+
 from resource_usage import simplify_file_name
 import os 
 import json 

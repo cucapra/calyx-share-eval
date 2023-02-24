@@ -2,9 +2,13 @@ import time
 import os 
 import sys 
 
-# Short script that times how long it takes to turn a .futil file into synth files 
-# mostly used to get an estimate of how long things will take when we try to 
-# get resource numbers 
+''' 
+Short script that times how long it takes to turn a .futil file into synth files 
+Mostly used to get an estimate of how long things will take when we try to 
+get resource numbers. 
+Run scripts/synth-time.py <input.futil>, and we it will write into a txt file 
+recording how many seconds it took to get the synth files. 
+'''
 
 start = time.time() 
 

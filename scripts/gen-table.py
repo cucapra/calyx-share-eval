@@ -3,11 +3,21 @@ import json
 import sys
 import csv
 import shutil
+from pathlib import Path 
 from resource_usage import simplify_file_name
 '''
 Once we have generated the resource sharing results, 
 you can run this script, with one argument (the output directory)
-to get a table of each of the results 
+to get a table of each of the results. 
+
+run scripts/gen-table.py <path/to/json> to get the resource results 
+
+The json should contain the following information: 
+
+"files": the path to the files 
+"stats": list of stats you want to collect. Include the word "all" in your list 
+if you want to collect all stats 
+"output_file": the file to write the csv to
 '''
 
 def flatten(l):
@@ -35,6 +45,9 @@ if __name__ == "__main__":
     json_data = json.load(open(sys.argv[1]))
     
     OUTPUT_FILE = json_data["output_file"]
+    my_path = '/'.join(OUTPUT_FILE.split('/')[0:-1])
+    if (not my_path == '') and (not os.path.exists(my_path)):
+      os.makedirs(my_path)
     files = json_data["files"] 
     stats = json_data["stats"]
     
