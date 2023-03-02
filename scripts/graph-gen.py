@@ -51,7 +51,7 @@ if __name__ == "__main__":
     resource_name = sys.argv[2]
     df = pd.read_csv("tables/full-table.csv")
     data = []
-    design_setting = df.loc[:, 'setting']
+    design_setting = df.loc[:, 'design/compiler setting']
     bound_1 = df.loc[:, f"""{resource_name}_1,1"""]
     bound_4 = df.loc[:, f"""{resource_name}_4,4"""]
     bound_none = df.loc[:, f"""{resource_name}_-1,-1"""]
@@ -61,6 +61,13 @@ if __name__ == "__main__":
           data.append([format(share_setting, "-"), "1", bound_1[idx]])
           data.append([format(share_setting, "-"), "4", bound_4[idx]])
           data.append([format(share_setting, "-"), "None", bound_none[idx]])
+    
+    df_calyx2020 = pd.read_csv("tables/full-table-calyx2020.csv")
+    designs = df_calyx2020.loc[:, "design"]
+    resrc_data = df_calyx2020.loc[:, f"""{resource_name}"""]
+    for (idx, dsgn) in enumerate(designs):
+      if dsgn == f"""{design}""":
+        data.append(['No Infer Share', 'Calyx 2020', resrc_data[idx]])
           
     df = pd.DataFrame(data, columns=['Compiler Setting', 'Share Bound', 'Usage'])
     # Set the figure size

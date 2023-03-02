@@ -38,54 +38,81 @@ def get_all_stats(files):
           # we just need to get to a place where we can have a list of all possible 
           # stats (i.e., dsp, lut, registers, etc.) to collect 
           return list(json_data[share_setting][bound_setting])
-            
+      
+def get_header(files, stats):
+  '''
+  header data should be organized by 1) stats and 2) bound 
+  For example: lut_1,1, lut_4,4, lut_-1,-1, dsp_1,1, etc. 
+  Assumes each file contains the same stats *in the same order* 
+  Might be wise to change script so this doesn't happen
+  '''
+  header_data = list(([] for _ in stats))
+  for f in files:
+    with open(f) as json_file: 
+      json_data = json.load(json_file) 
+      for share_setting in json_data:
+        for bound_setting in json_data[share_setting]:
+          for idx,stat in enumerate(stats):
+            header_data[idx].append(stat + "_" + bound_setting)
+        return ["design/compiler setting"] + flatten(header_data)     
 
 if __name__ == "__main__":
     assert (len(sys.argv) == 2), "please provide an input json file name"
-    json_data = json.load(open(sys.argv[1]))
-    
-    OUTPUT_FILE = json_data["output_file"]
-    my_path = '/'.join(OUTPUT_FILE.split('/')[0:-1])
-    if (not my_path == '') and (not os.path.exists(my_path)):
-      os.makedirs(my_path)
-    files = json_data["files"] 
-    stats = json_data["stats"]
-    
+    table_info = json.load(open(sys.argv[1]))
+    files = table_info["files"] 
+    files_calyx2020 = table_info["files_calyx2020"]
+    stats = table_info["stats"]
     if "all" in stats:
       # update stats to be all possible stats if that's what we want to collect 
       stats = get_all_stats(files)
-  
-    csv_writer = csv.writer(open(f"{OUTPUT_FILE}", 'w'))
-    header = ['setting']
-    # for just the first iteration through a json file, we will need to collect 
-    # information for the header. After this it won't be necessary 
-    need_header_info = True 
+    # makes path to file if it doesn't exist
+    path = table_info["output_path"]
+    if (not path == '') and (not os.path.exists(path)):
+      os.makedirs(path) 
+    OUTPUT_FILE = os.path.join(path, table_info["output_file"])
+    OUTPUT_FILE_CALYX2020 = os.path.join(path, table_info["output_file_calyx2020"])
     
-    rows = []
+    # rows should start with the header 
+    rows = [get_header(files, stats)]
     
     for f in files:
       with open(f) as json_file:  
         json_data = json.load(json_file)
         for share_setting in json_data:
+          data_by_bound = json_data[share_setting]
           cur_row = [f"{simplify_file_name(f)}_{share_setting}"]
           # need to keep cur_row_data as nested list so it appears in a more 
           # intuitive order in the csv file 
           cur_row_data = list(([] for _ in stats))
-          header_data = list(([] for _ in stats))
-          for bound_setting in json_data[share_setting]:
+          for bound_setting in data_by_bound:
             for idx,stat in enumerate(stats):
-              if need_header_info:
-                header_data[idx].append(stat + "_" + bound_setting)
               cur_row_data[idx].append(json_data[share_setting][bound_setting][stat]) 
           cur_row += flatten(cur_row_data)
           rows.append(cur_row)
-          if need_header_info:
-            # the csv file only needs one header, so once we have the header info 
-            # needed, we don't need to collect it again 
-            header += flatten(header_data)
-            need_header_info = False 
-
-    rows.insert(0, header)
+    
+    csv_writer = csv.writer(open(f"{OUTPUT_FILE}", 'w'))
+    # write each line in rows to file 
     for line in rows:
       csv_writer.writerow(line)
+      
+    # now do a similar thing for calyx 2020 
+    rows_calyx2020 = [["design"] + stats]
+    
+    for f in files_calyx2020:
+      with open(f) as json_file:  
+        json_data = json.load(json_file)
+        cur_row = [f"{simplify_file_name(f)}"]
+        for stat in stats:
+          cur_row.append(json_data[stat])
+        rows_calyx2020.append(cur_row)
+    
+    csv_writer = csv.writer(open(f"{OUTPUT_FILE_CALYX2020}", 'w'))
+    # write each line in rows to file 
+    for line in rows_calyx2020:
+      csv_writer.writerow(line)
+      
+    
+    
+    
+
             

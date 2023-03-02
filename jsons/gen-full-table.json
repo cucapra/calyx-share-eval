@@ -10,5 +10,8 @@
   "stats": [
     "all"
   ],
-  "output_file": "tables/full-table.csv"
+  "output_path": "tables",
+  "output_file": "full-table.csv",
+  "output_file_calyx2020": "full-table-calyx2020.csv",
+  "files_calyx2020": []
 }
