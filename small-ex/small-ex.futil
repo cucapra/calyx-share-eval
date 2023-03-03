@@ -90,7 +90,7 @@ component main() -> () {
     }
   }
   control {
-    seq { init_r; invoke op(reg_done = r.done, reg_out = r.out)(); invoke op(reg_done = r.done, reg_out = r.out)(); m0; m1; m2; m3; m4; m5; }
+    seq { init_r; invoke op(reg_done = r.done, reg_out = r.out)(); invoke op2(reg_done = r.done, reg_out = r.out)(); m0; m1; m2; m3; m4; m5; }
   }
 }
 //// ANCHOR_END: main

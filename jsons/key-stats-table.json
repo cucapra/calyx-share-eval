@@ -12,5 +12,15 @@
     "dsp",
     "registers"
   ],
-  "output_file": "tables/key-stats-table.csv"
+  "output_path": "tables",
+  "output_file": "key-stats-table.csv",
+  "files_calyx2020": [
+    "results/alex/alex_calyx_2020.json",
+    "results/google/google_calyx_2020.json",
+    "results/lenet/lenet_calyx_2020.json",
+    "results/mobile/mobile_calyx_2020.json",
+    "results/squeeze/squeeze_calyx_2020.json",
+    "results/vgg/vgg_calyx_2020.json"
+  ],
+  "output_file_calyx2020": "key-stats-table-calyx2020.csv"
 }

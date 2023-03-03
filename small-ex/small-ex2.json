@@ -10,5 +10,7 @@
     "fully-inline"
   ],
   "output-dir": "small-results/small2",
-  "synth-file": "synth.tcl"
+  "synth-file": "synth.tcl",
+  "device": "device10.xdc",
+  "calyx_2020": true
 }

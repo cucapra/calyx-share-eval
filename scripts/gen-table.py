@@ -106,10 +106,10 @@ if __name__ == "__main__":
           cur_row.append(json_data[stat])
         rows_calyx2020.append(cur_row)
     
-    csv_writer = csv.writer(open(f"{OUTPUT_FILE_CALYX2020}", 'w'))
+    csv_writer_calyx_2020 = csv.writer(open(f"{OUTPUT_FILE_CALYX2020}", 'w'))
     # write each line in rows to file 
     for line in rows_calyx2020:
-      csv_writer.writerow(line)
+      csv_writer_calyx_2020.writerow(line)
       
     
     

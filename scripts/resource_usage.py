@@ -48,19 +48,50 @@ def run_command(command, commands_file):
   except subprocess.CalledProcessError as exc:
     error_str = "Status : FAIL " + str(exc.returncode) + " "+ str(exc.output)
     write_to_file(errors_file, error_str)
+    
+def run_calyx2020(file, output_dir, synth_file_flag, device_flag):
+  start = time.time() 
+  futil_flags = f'-s futil.flags "-x cell-share:calyx_2020 -d group2invoke -d tdst"'
+  run_info = simplify_file_name(file) + "_" + "calyx_2020"
+  # where to put the full synth-files directory 
+  synth_files_directory = os.path.join(output_dir,run_info) 
+  # where to put the resource estimates json 
+  resource_estimates_file = os.path.join(output_dir, run_info + ".json")
 
-def run_synthesis(files, settings, bounds, output_dir, synth_file_flag, device_flag):
+  # first get synth_files (they can be helpful to look at)
+  run_command(f"fud e --to synth-files {file} -o {synth_files_directory} {synth_file_flag} {device_flag} {futil_flags}", commands_file)
+  
+  # next get resource estimates from synth files 
+  run_command(f"fud e --to resource-estimate --from synth-files {synth_files_directory} > {resource_estimates_file}", commands_file)
+
+  # loading the data we just got and putting into one big json file. 
+  # So for each neural network (e.g., LeNet) we have a big json with 
+  # all the data we want in it 
+  json_data = json.load(open(resource_estimates_file))
+  if json_data["meet_timing"] != 1:
+    write_to_file(errors_file, f"""{run_info} does not meet timing""")
+  
+  end = time.time()
+  time_consumed=end-start
+  time_str = run_info + ": " + str(time_consumed/60) + " minutes"
+  write_to_file(timing_file, time_str)
+
+def run_synthesis(files, settings, bounds, output_dir, synth_file_flag, device_flag, calyx_2020):
   # f is the futil file that we run resource estimations on. 
   for f in files:
+    if calyx_2020:
+      run_calyx2020(f, output_dir, synth_file_flag, device_flag)
     # big_json is a json that stores all of the resource estimates for this design 
     big_json = {}
     for s in settings:
       assert s in settings_supported, f"setting is not supported. Must be one of {settings_supported}"
-      settings_flag = ""
+      # group2invoke can use unnecessary registers 
+      # tdst is not yet fully implemented 
+      settings_flag = " -d group2invoke -d tdst "
       if s == "no-infer-share":
-        settings_flag = '-d infer-share' 
+        settings_flag += ' -d infer-share' 
       elif s == "fully-inline":
-        settings_flag = '-x inline:always -x inline:new-fsms  -d group2invoke -d tdst' 
+        settings_flag += ' -x inline:always -x inline:new-fsms' 
       big_json[s] = {}
       for b in bounds:
         start = time.time() 
@@ -104,6 +135,7 @@ if __name__ == "__main__":
   output_dir = json_data["output-dir"]
   synth_file = json_data["synth-file"]
   device_file = json_data["device"]
+  calyx_2020 = json_data["calyx_2020"]
 
   # setting the synth file flag for when we do fud commands 
   synth_file_flag = f"-s synth-verilog.tcl {synth_file}"
@@ -126,4 +158,4 @@ if __name__ == "__main__":
   # whether timing is met 
   errors_file = os.path.join(output_dir, "errors.txt")
   
-  run_synthesis(files, settings, bounds, output_dir, synth_file_flag, device_flag)
+  run_synthesis(files, settings, bounds, output_dir, synth_file_flag, device_flag, calyx_2020)

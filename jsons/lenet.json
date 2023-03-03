@@ -14,5 +14,6 @@
   ],
   "output-dir": "results/lenet",
   "synth-file": "synth.tcl",
-  "device": "device10.xdc"
+  "device": "device10.xdc",
+  "calyx_2020": true
 }
