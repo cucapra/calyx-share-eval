@@ -1,40 +1,20 @@
-fud e --to synth-files nn-designs/vgg.futil -o results/vgg/vgg_calyx_2020 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags "-x cell-share:calyx_2020 -d group2invoke -d tdst"
+fud e --to synth-files nn-designs/vgg.futil -o results/vgg/vgg_no-infer-share_1_1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -d infer-share -x cell-share:bounds=1,1,1"
 
-fud e --to resource-estimate --from synth-files results/vgg/vgg_calyx_2020 > results/vgg/vgg_calyx_2020.json
+fud e --to resource-estimate --from synth-files results/vgg/vgg_no-infer-share_1_1_1 > results/vgg/resource-estimates/vgg_no-infer-share_1_1_1.json
 
-fud e --to synth-files nn-designs/vgg.futil -o results/vgg/vgg_1_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x inline:always -x inline:new-fsms -x cell-share:bounds=1,1,1"
+fud e --to synth-files nn-designs/vgg.futil -o results/vgg/vgg_no-infer-share_-1_-1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -d infer-share -x cell-share:bounds=-1,-1,1"
 
-fud e --to resource-estimate --from synth-files results/vgg/vgg_1_fully-inline > results/vgg/resource-estimates/vgg_1_fully-inline.json
+fud e --to resource-estimate --from synth-files results/vgg/vgg_no-infer-share_-1_-1_1 > results/vgg/resource-estimates/vgg_no-infer-share_-1_-1_1.json
 
-fud e --to synth-files nn-designs/vgg.futil -o results/vgg/vgg_4_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x inline:always -x inline:new-fsms -x cell-share:bounds=1,4,4"
+fud e --to synth-files nn-designs/vgg.futil -o results/vgg/vgg_no-infer-share_-1_-1_-1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -d infer-share -x cell-share:bounds=-1,-1,-1"
 
-fud e --to resource-estimate --from synth-files results/vgg/vgg_4_fully-inline > results/vgg/resource-estimates/vgg_4_fully-inline.json
+fud e --to resource-estimate --from synth-files results/vgg/vgg_no-infer-share_-1_-1_-1 > results/vgg/resource-estimates/vgg_no-infer-share_-1_-1_-1.json
 
-fud e --to synth-files nn-designs/vgg.futil -o results/vgg/vgg_-1_fully-inline -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x inline:always -x inline:new-fsms -x cell-share:bounds=1,-1,-1"
+fud e --to synth-files nn-designs/vgg.futil -o results/vgg/vgg_default_-1_-1_-1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=-1,-1,-1"
 
-fud e --to resource-estimate --from synth-files results/vgg/vgg_-1_fully-inline > results/vgg/resource-estimates/vgg_-1_fully-inline.json
+fud e --to resource-estimate --from synth-files results/vgg/vgg_default_-1_-1_-1 > results/vgg/resource-estimates/vgg_default_-1_-1_-1.json
 
-fud e --to synth-files nn-designs/vgg.futil -o results/vgg/vgg_1_default -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=1,1,1"
+fud e --to synth-files nn-designs/vgg.futil -o results/vgg/vgg_fully-inline_-1_-1_-1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x inline:always -x inline:new-fsms -x cell-share:bounds=-1,-1,-1"
 
-fud e --to resource-estimate --from synth-files results/vgg/vgg_1_default > results/vgg/resource-estimates/vgg_1_default.json
-
-fud e --to synth-files nn-designs/vgg.futil -o results/vgg/vgg_4_default -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=1,4,4"
-
-fud e --to resource-estimate --from synth-files results/vgg/vgg_4_default > results/vgg/resource-estimates/vgg_4_default.json
-
-fud e --to synth-files nn-designs/vgg.futil -o results/vgg/vgg_-1_default -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=1,-1,-1"
-
-fud e --to resource-estimate --from synth-files results/vgg/vgg_-1_default > results/vgg/resource-estimates/vgg_-1_default.json
-
-fud e --to synth-files nn-designs/vgg.futil -o results/vgg/vgg_1_no-infer-share -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -d infer-share -x cell-share:bounds=1,1,1"
-
-fud e --to resource-estimate --from synth-files results/vgg/vgg_1_no-infer-share > results/vgg/resource-estimates/vgg_1_no-infer-share.json
-
-fud e --to synth-files nn-designs/vgg.futil -o results/vgg/vgg_4_no-infer-share -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -d infer-share -x cell-share:bounds=1,4,4"
-
-fud e --to resource-estimate --from synth-files results/vgg/vgg_4_no-infer-share > results/vgg/resource-estimates/vgg_4_no-infer-share.json
-
-fud e --to synth-files nn-designs/vgg.futil -o results/vgg/vgg_-1_no-infer-share -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -d infer-share -x cell-share:bounds=1,-1,-1"
-
-fud e --to resource-estimate --from synth-files results/vgg/vgg_-1_no-infer-share > results/vgg/resource-estimates/vgg_-1_no-infer-share.json
+fud e --to resource-estimate --from synth-files results/vgg/vgg_fully-inline_-1_-1_-1 > results/vgg/resource-estimates/vgg_fully-inline_-1_-1_-1.json
 

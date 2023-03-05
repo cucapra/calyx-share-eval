@@ -37353,7 +37353,9 @@ component fp_pow_full(base: 32, exp_value: 32) -> (out: 32) {
       }
     }
   }
-}component main() -> () {
+}
+
+component main() -> () {
   cells {
     @external data_0 = seq_mem_d4(32, 1, 3, 224, 224, 1, 2, 8, 8);
     @external x_4 = seq_mem_d4(32, 64, 3, 7, 7, 7, 2, 3, 3);

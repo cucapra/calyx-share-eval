@@ -1,10 +1,5 @@
-mobile_calyx_2020: 35.88043856223424 minutes
-mobile_1_fully-inline: 44.87894239823024 minutes
-mobile_4_fully-inline: 24.777108387152353 minutes
-mobile_-1_fully-inline: 23.92231784661611 minutes
-mobile_1_default: 31.495698614915213 minutes
-mobile_4_default: 33.166394058863325 minutes
-mobile_-1_default: 30.48373835881551 minutes
-mobile_1_no-infer-share: 28.25661153793335 minutes
-mobile_4_no-infer-share: 32.86949365536372 minutes
-mobile_-1_no-infer-share: 32.68604730765025 minutes
+mobile_no-infer-share_1_1_1: 32.544739337762195 minutes
+mobile_no-infer-share_-1_-1_1: 35.08891708056132 minutes
+mobile_no-infer-share_-1_-1_-1: 35.18060688177744 minutes
+mobile_default_-1_-1_-1: 20.381580046812694 minutes
+mobile_fully-inline_-1_-1_-1: 15.941090444723764 minutes

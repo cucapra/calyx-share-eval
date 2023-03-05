@@ -52,24 +52,17 @@ if __name__ == "__main__":
     df = pd.read_csv("tables/full-table.csv")
     data = []
     design_setting = df.loc[:, 'design/compiler setting']
-    bound_1 = df.loc[:, f"""{resource_name}_1,1"""]
-    bound_4 = df.loc[:, f"""{resource_name}_4,4"""]
-    bound_none = df.loc[:, f"""{resource_name}_-1,-1"""]
+    never_share = df.loc[:, f"""{resource_name}_1,1,1"""]
+    calyx_2020 = df.loc[:, f"""{resource_name}_-1,-1,1"""]
+    always_share = df.loc[:, f"""{resource_name}_-1,-1,-1"""]
     for (idx, design_setting) in enumerate(design_setting):
       for share_setting in share_settings:
         if design_setting == f"""{design}_{share_setting}""":
-          data.append([format(share_setting, "-"), "1", bound_1[idx]])
-          data.append([format(share_setting, "-"), "4", bound_4[idx]])
-          data.append([format(share_setting, "-"), "None", bound_none[idx]])
-    
-    df_calyx2020 = pd.read_csv("tables/full-table-calyx2020.csv")
-    designs = df_calyx2020.loc[:, "design"]
-    resrc_data = df_calyx2020.loc[:, f"""{resource_name}"""]
-    for (idx, dsgn) in enumerate(designs):
-      if dsgn == f"""{design}""":
-        data.append(['No Infer Share', 'Calyx 2020', resrc_data[idx]])
+          data.append([format(share_setting, "-"), "No Sharing", never_share[idx]])
+          data.append([format(share_setting, "-"), "Calyx 2020 ", calyx_2020[idx]])
+          data.append([format(share_setting, "-"), "Always Share", always_share[idx]])
           
-    df = pd.DataFrame(data, columns=['Compiler Setting', 'Share Bound', 'Usage'])
+    df = pd.DataFrame(data, columns=['Compiler Setting', 'Sharing Type', 'Usage'])
     # Set the figure size
     fig = plt.figure(figsize=(8, 8))
     fig.add_axes([0.1, 0.1, 0.65, 0.85])
@@ -77,7 +70,7 @@ if __name__ == "__main__":
     formatted_share_setting = [format(s, "-") for s in share_settings]
 
     # grouped barplot
-    ax = sns.barplot(x="Compiler Setting", y="Usage", hue="Share Bound", order = formatted_share_setting, data=df, errorbar=None)
+    ax = sns.barplot(x="Compiler Setting", y="Usage", hue="Sharing Type", order = formatted_share_setting, data=df, errorbar=None)
     
     ax.set(title=f"""{format(resource_name, "_")} Usage on {format_design_name(design)}""")
     

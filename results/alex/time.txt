@@ -1,10 +1,5 @@
-alex_calyx_2020: 16.625153756141664 minutes
-alex_1_fully-inline: 24.623969944318137 minutes
-alex_4_fully-inline: 15.261149426301321 minutes
-alex_-1_fully-inline: 14.435725541909536 minutes
-alex_1_default: 16.408915837605793 minutes
-alex_4_default: 15.381933037439982 minutes
-alex_-1_default: 15.426388422648111 minutes
-alex_1_no-infer-share: 16.332823077837627 minutes
-alex_4_no-infer-share: 15.913610076904297 minutes
-alex_-1_no-infer-share: 15.108673127492269 minutes
+alex_no-infer-share_1_1_1: 16.29789170821508 minutes
+alex_no-infer-share_-1_-1_1: 16.87270141839981 minutes
+alex_no-infer-share_-1_-1_-1: 16.291528729597726 minutes
+alex_default_-1_-1_-1: 15.39710827668508 minutes
+alex_fully-inline_-1_-1_-1: 14.62461170355479 minutes

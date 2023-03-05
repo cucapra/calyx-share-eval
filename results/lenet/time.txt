@@ -1,10 +1,5 @@
-lenet_calyx_2020: 10.511330445607504 minutes
-lenet_1_fully-inline: 11.032272132237752 minutes
-lenet_4_fully-inline: 10.64885999361674 minutes
-lenet_-1_fully-inline: 9.943398582935334 minutes
-lenet_1_default: 10.093091694513957 minutes
-lenet_4_default: 8.9599431792895 minutes
-lenet_-1_default: 9.220227448145549 minutes
-lenet_1_no-infer-share: 10.244156730175018 minutes
-lenet_4_no-infer-share: 10.45514664252599 minutes
-lenet_-1_no-infer-share: 10.766727133591969 minutes
+lenet_no-infer-share_1_1_1: 10.101602466901143 minutes
+lenet_no-infer-share_-1_-1_1: 10.728317952156067 minutes
+lenet_no-infer-share_-1_-1_-1: 10.98336892525355 minutes
+lenet_default_-1_-1_-1: 9.6362064798673 minutes
+lenet_fully-inline_-1_-1_-1: 8.483222897847494 minutes

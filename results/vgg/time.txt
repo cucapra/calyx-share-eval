@@ -1,10 +1,5 @@
-vgg_calyx_2020: 15.009693952401479 minutes
-vgg_1_fully-inline: 18.679646444320678 minutes
-vgg_4_fully-inline: 13.280634232362111 minutes
-vgg_-1_fully-inline: 13.895636653900146 minutes
-vgg_1_default: 14.788919134934742 minutes
-vgg_4_default: 15.133510581652324 minutes
-vgg_-1_default: 15.087470149993896 minutes
-vgg_1_no-infer-share: 15.073844373226166 minutes
-vgg_4_no-infer-share: 14.635112961133322 minutes
-vgg_-1_no-infer-share: 14.84787571032842 minutes
+vgg_no-infer-share_1_1_1: 15.174239293734233 minutes
+vgg_no-infer-share_-1_-1_1: 15.196083362897237 minutes
+vgg_no-infer-share_-1_-1_-1: 15.463944705327352 minutes
+vgg_default_-1_-1_-1: 14.61724191904068 minutes
+vgg_fully-inline_-1_-1_-1: 9.424047780036926 minutes

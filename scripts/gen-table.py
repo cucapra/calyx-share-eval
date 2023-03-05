@@ -60,7 +60,6 @@ if __name__ == "__main__":
     assert (len(sys.argv) == 2), "please provide an input json file name"
     table_info = json.load(open(sys.argv[1]))
     files = table_info["files"] 
-    files_calyx2020 = table_info["files_calyx2020"]
     stats = table_info["stats"]
     if "all" in stats:
       # update stats to be all possible stats if that's what we want to collect 
@@ -70,8 +69,7 @@ if __name__ == "__main__":
     if (not path == '') and (not os.path.exists(path)):
       os.makedirs(path) 
     OUTPUT_FILE = os.path.join(path, table_info["output_file"])
-    OUTPUT_FILE_CALYX2020 = os.path.join(path, table_info["output_file_calyx2020"])
-    
+        
     # rows should start with the header 
     rows = [get_header(files, stats)]
     
@@ -94,25 +92,3 @@ if __name__ == "__main__":
     # write each line in rows to file 
     for line in rows:
       csv_writer.writerow(line)
-      
-    # now do a similar thing for calyx 2020 
-    rows_calyx2020 = [["design"] + stats]
-    
-    for f in files_calyx2020:
-      with open(f) as json_file:  
-        json_data = json.load(json_file)
-        cur_row = [f"{simplify_file_name(f)}"]
-        for stat in stats:
-          cur_row.append(json_data[stat])
-        rows_calyx2020.append(cur_row)
-    
-    csv_writer_calyx_2020 = csv.writer(open(f"{OUTPUT_FILE_CALYX2020}", 'w'))
-    # write each line in rows to file 
-    for line in rows_calyx2020:
-      csv_writer_calyx_2020.writerow(line)
-      
-    
-    
-    
-
-            

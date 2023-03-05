@@ -1,10 +1,5 @@
-squeeze_calyx_2020: 26.34917734861374 minutes
-squeeze_1_fully-inline: 25.432194499174752 minutes
-squeeze_4_fully-inline: 17.87222687403361 minutes
-squeeze_-1_fully-inline: 16.697119895617167 minutes
-squeeze_1_default: 20.90927093823751 minutes
-squeeze_4_default: 20.41510351896286 minutes
-squeeze_-1_default: 20.36612876653671 minutes
-squeeze_1_no-infer-share: 20.360102427005767 minutes
-squeeze_4_no-infer-share: 19.51351462205251 minutes
-squeeze_-1_no-infer-share: 19.727478845914206 minutes
+squeeze_no-infer-share_1_1_1: 20.944779217243195 minutes
+squeeze_no-infer-share_-1_-1_1: 25.78488053480784 minutes
+squeeze_no-infer-share_-1_-1_-1: 25.80449389219284 minutes
+squeeze_default_-1_-1_-1: 15.89590553442637 minutes
+squeeze_fully-inline_-1_-1_-1: 9.693140745162964 minutes

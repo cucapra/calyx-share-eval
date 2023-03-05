@@ -1,0 +1,12 @@
+fud e --to synth-files small-ex/small-ex2.futil -o small-results/small2/small-ex_small-ex2_futil_no-infer-share_1_1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -d infer-share -x cell-share:bounds=1,1,1"
+
+fud e --to resource-estimate --from synth-files small-results/small2/small-ex_small-ex2_futil_no-infer-share_1_1_1 > small-results/small2/resource-estimates/small-ex_small-ex2_futil_no-infer-share_1_1_1.json
+
+fud e --to synth-files small-ex/small-ex2.futil -o small-results/small2/small-ex_small-ex2_futil_default_-1_-1_-1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=-1,-1,-1"
+
+fud e --to resource-estimate --from synth-files small-results/small2/small-ex_small-ex2_futil_default_-1_-1_-1 > small-results/small2/resource-estimates/small-ex_small-ex2_futil_default_-1_-1_-1.json
+
+fud e --to synth-files small-ex/small-ex2.futil -o small-results/small2/small-ex_small-ex2_futil_fully-inline_4_4_4 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x inline:always -x inline:new-fsms -x cell-share:bounds=4,4,4"
+
+fud e --to resource-estimate --from synth-files small-results/small2/small-ex_small-ex2_futil_fully-inline_4_4_4 > small-results/small2/resource-estimates/small-ex_small-ex2_futil_fully-inline_4_4_4.json
+
