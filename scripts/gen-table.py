@@ -46,15 +46,15 @@ def get_header(files, stats):
   Assumes each file contains the same stats *in the same order* 
   Might be wise to change script so this doesn't happen
   '''
-  header_data = list(([] for _ in stats))
+  header_data = ["design/resource"]
   for f in files:
     with open(f) as json_file: 
       json_data = json.load(json_file) 
       for share_setting in json_data:
-        for bound_setting in json_data[share_setting]:
-          for idx,stat in enumerate(stats):
-            header_data[idx].append(stat + "_" + bound_setting)
-        return ["design/compiler setting"] + flatten(header_data)     
+        data_by_bound = json_data[share_setting]
+        for bound_setting in data_by_bound:
+            header_data.append(share_setting + "_" + bound_setting)
+    return header_data
 
 if __name__ == "__main__":
     assert (len(sys.argv) == 2), "please provide an input json file name"
@@ -76,16 +76,12 @@ if __name__ == "__main__":
     for f in files:
       with open(f) as json_file:  
         json_data = json.load(json_file)
-        for share_setting in json_data:
-          data_by_bound = json_data[share_setting]
-          cur_row = [f"{simplify_file_name(f)}_{share_setting}"]
-          # need to keep cur_row_data as nested list so it appears in a more 
-          # intuitive order in the csv file 
-          cur_row_data = list(([] for _ in stats))
-          for bound_setting in data_by_bound:
-            for idx,stat in enumerate(stats):
-              cur_row_data[idx].append(json_data[share_setting][bound_setting][stat]) 
-          cur_row += flatten(cur_row_data)
+        for stat in stats:
+          cur_row = [f"{simplify_file_name(f)}_{stat}"]
+          for share_setting in json_data:
+            data_by_bound = json_data[share_setting]
+            for bound_setting in data_by_bound:
+                cur_row.append(json_data[share_setting][bound_setting][stat]) 
           rows.append(cur_row)
     
     csv_writer = csv.writer(open(f"{OUTPUT_FILE}", 'w'))
