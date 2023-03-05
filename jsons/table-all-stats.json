@@ -11,5 +11,5 @@
     "all"
   ],
   "output_path": "tables",
-  "output_file": "all-stats.csv"
+  "output_file": "all-stats-table.csv"
 }
