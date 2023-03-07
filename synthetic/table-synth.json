@@ -1,6 +1,6 @@
 {
   "files": [
-    "most-synthetic-results/32-500/synth-results.json"
+    "synthetic-results/32-500/synth-results.json"
   ],
   "stats": [
     "registers",
