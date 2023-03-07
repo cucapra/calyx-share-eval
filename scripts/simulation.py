@@ -1,14 +1,13 @@
 '''
-Reads in a JSON and runs resource estimates. 
+Reads in a JSON and runs simulation. 
 Also, records the commnands run in the terminal, as well as an "errors" file 
 that tells you any errors that occured, and whether each simulation meets timing. 
 The json input needs: 
-"files": .futil file to estimate resource for 
+"file": .futil file to estimate resource for 
 "compiler_settings": the compiler settings. should be: [setting, [bound1, bound2, bound3]]
 setting should be "fully-inline", "default", or "no-infer-share"
-"output-dir": the output directory 
-"synth-file": the synthesis file 
-"device": the device to run 
+"results-path": the output directory 
+"input-data": the path to the input data for the simulation 
 '''
 
 import shutil 
@@ -41,7 +40,7 @@ def write_to_file(file_dest, s):
     fd.write(s)
     fd.write("\n")
 
-def run_command(command, commands_file):
+def run_command(command, commands_file, errors_file):
   '''
   runs command on terminal, and writes the command it ran to file 
   '''
@@ -52,7 +51,7 @@ def run_command(command, commands_file):
     error_str = "Status : FAIL " + str(exc.returncode) + " "+ str(exc.output)
     write_to_file(errors_file, error_str)
     
-def run_synthesis(file, compiler_settings, output_dir, synth_file_flag, device_flag):
+def run_synthesis(file, compiler_settings, output_dir, synth_file_flag, device_flag, errors_file):
     # big_json is a json that stores all of the resource estimates for this design 
     big_json = {}
     for compiler_setting in compiler_settings:
@@ -81,19 +80,17 @@ def run_synthesis(file, compiler_settings, output_dir, synth_file_flag, device_f
 
       
       # first get synth_files (they can be helpful to look at)
-      run_command(f"fud e --to synth-files {file} -o {synth_files_directory} {synth_file_flag} {device_flag} {futil_flags}", commands_file)
+      run_command(f"fud e --to synth-files {file} -o {synth_files_directory} {synth_file_flag} {device_flag} {futil_flags}", commands_file, errors_file)
       
       # next get resource estimates from synth files 
-      run_command(f"fud e --to resource-estimate --from synth-files {synth_files_directory} > {resource_estimates_file}", commands_file)
+      run_command(f"fud e --to resource-estimate --from synth-files {synth_files_directory} > {resource_estimates_file}", commands_file, errors_file)
       
       # loading the data we just got and putting into one big json file. 
       # So for each neural network (e.g., LeNet) we have a big json with 
       # all the data we want in it 
       json_data = json.load(open(resource_estimates_file))
       big_json[setting][f"{bounds[0]},{bounds[1]},{bounds[2]}"] = json_data
-      if "meet_timing" not in json_data:
-        write_to_file(errors_file,f"""{run_info} generated partial results""")
-      elif json_data["meet_timing"] != 1:
+      if json_data["meet_timing"] != 1:
         write_to_file(errors_file,f"""{run_info} does not meet timing""")
       
       end = time.time()
@@ -136,4 +133,4 @@ if __name__ == "__main__":
   # whether timing is met 
   errors_file = os.path.join(output_dir, "errors.txt")
   
-  run_synthesis(file, compiler_settings, output_dir, synth_file_flag, device_flag)
+  run_synthesis(file, compiler_settings, output_dir, synth_file_flag, device_flag, errors_file)

@@ -1,0 +1,26 @@
+synthetic_synth-32-500_futil_default_1_1_1: 10.103792397181193 minutes
+synthetic_synth-32-500_futil_default_1_8_1: 8.929558424154918 minutes
+synthetic_synth-32-500_futil_default_1_32_1: 8.387154066562653 minutes
+synthetic_synth-32-500_futil_default_1_128_1: 8.82061163187027 minutes
+synthetic_synth-32-500_futil_default_1_-1_1: 9.489829671382903 minutes
+synthetic_synth-32-500_futil_default_8_1_1: 9.760191476345062 minutes
+synthetic_synth-32-500_futil_default_8_8_1: 7.877234200636546 minutes
+synthetic_synth-32-500_futil_default_8_32_1: 7.868968379497528 minutes
+synthetic_synth-32-500_futil_default_8_128_1: 7.8744813919067385 minutes
+synthetic_synth-32-500_futil_default_8_-1_1: 7.843769005934397 minutes
+synthetic_synth-32-500_futil_default_32_1_1: 9.09369604587555 minutes
+synthetic_synth-32-500_futil_default_32_8_1: 7.911534174283346 minutes
+synthetic_synth-32-500_futil_default_32_32_1: 7.687036875883738 minutes
+synthetic_synth-32-500_futil_default_32_128_1: 7.861212066809336 minutes
+synthetic_synth-32-500_futil_default_32_-1_1: 7.761367913087209 minutes
+synthetic_synth-32-500_futil_default_128_1_1: 9.804135668277741 minutes
+synthetic_synth-32-500_futil_default_128_8_1: 8.7320871869723 minutes
+synthetic_synth-32-500_futil_default_128_32_1: 8.608215049902599 minutes
+synthetic_synth-32-500_futil_default_128_128_1: 8.660792056719462 minutes
+synthetic_synth-32-500_futil_default_128_-1_1: 8.627192231019338 minutes
+synthetic_synth-32-500_futil_default_-1_1_1: 9.028628206253051 minutes
+synthetic_synth-32-500_futil_default_-1_8_1: 7.876571190357208 minutes
+synthetic_synth-32-500_futil_default_-1_32_1: 7.802963022391001 minutes
+synthetic_synth-32-500_futil_default_-1_128_1: 7.728003847599029 minutes
+synthetic_synth-32-500_futil_default_-1_-1_1: 7.776241830984751 minutes
+

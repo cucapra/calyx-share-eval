@@ -1,0 +1,21 @@
+{
+  "files": [
+    "most-synthetic-results/32-500/synth-results.json"
+  ],
+  "stats": [
+    "registers",
+    "lut",
+    "cell_lut1",
+    "cell_lut2",
+    "cell_lut3",
+    "cell_lut4",
+    "cell_lut5",
+    "cell_lut6",
+    "cell_fdre",
+    "muxes",
+    "clb",
+    "worst_slack"
+  ],
+  "output_path": "synth-exp-tables",
+  "output_file": "key-stats-table.csv"
+}
