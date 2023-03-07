@@ -1,0 +1,18 @@
+fud e synthetic/synth-32-500.futil -s verilog.data synthetic/input-32-500.json --to dat --through verilog -v -o synthetic-simulation/32-500/sim-results/synthetic_synth-32-500_futil_default_1_32_1.json
+
+fud e synthetic/synth-32-500.futil -s verilog.data synthetic/input-32-500.json --to dat --through verilog -v -o synthetic-simulation/32-500/sim-results/synthetic_synth-32-500_futil_default_8_-1_1.json
+
+fud e synthetic/synth-32-500.futil -s verilog.data synthetic/input-32-500.json --to dat --through verilog -v -o synthetic-simulation/32-500/sim-results/synthetic_synth-32-500_futil_default_32_1_1.json
+
+fud e synthetic/synth-32-500.futil -s verilog.data synthetic/input-32-500.json --to dat --through verilog -v -o synthetic-simulation/32-500/sim-results/synthetic_synth-32-500_futil_default_32_128_1.json
+
+fud e synthetic/synth-32-500.futil -s verilog.data synthetic/input-32-500.json --to dat --through verilog -v -o synthetic-simulation/32-500/sim-results/synthetic_synth-32-500_futil_default_128_8_1.json
+
+fud e synthetic/synth-32-500.futil -s verilog.data synthetic/input-32-500.json --to dat --through verilog -v -o synthetic-simulation/32-500/sim-results/synthetic_synth-32-500_futil_default_128_128_1.json
+
+fud e synthetic/synth-32-500.futil -s verilog.data synthetic/input-32-500.json --to dat --through verilog -v -o synthetic-simulation/32-500/sim-results/synthetic_synth-32-500_futil_default_128_-1_1.json
+
+fud e synthetic/synth-32-500.futil -s verilog.data synthetic/input-32-500.json --to dat --through verilog -v -o synthetic-simulation/32-500/sim-results/synthetic_synth-32-500_futil_default_-1_1_1.json
+
+fud e synthetic/synth-32-500.futil -s verilog.data synthetic/input-32-500.json --to dat --through verilog -v -o synthetic-simulation/32-500/sim-results/synthetic_synth-32-500_futil_default_-1_-1_1.json
+

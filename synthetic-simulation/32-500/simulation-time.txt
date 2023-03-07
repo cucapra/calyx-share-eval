@@ -1,0 +1,9 @@
+synthetic_synth-32-500_futil_default_1_32_1: 1.7068323850631715 minutes
+synthetic_synth-32-500_futil_default_8_-1_1: 1.9464348514874776 minutes
+synthetic_synth-32-500_futil_default_32_1_1: 1.6671951810518901 minutes
+synthetic_synth-32-500_futil_default_32_128_1: 1.639866797129313 minutes
+synthetic_synth-32-500_futil_default_128_8_1: 1.6108563462893168 minutes
+synthetic_synth-32-500_futil_default_128_128_1: 1.5469992359479268 minutes
+synthetic_synth-32-500_futil_default_128_-1_1: 1.5762485146522522 minutes
+synthetic_synth-32-500_futil_default_-1_1_1: 1.5599209984143576 minutes
+synthetic_synth-32-500_futil_default_-1_-1_1: 1.5218136310577393 minutes
