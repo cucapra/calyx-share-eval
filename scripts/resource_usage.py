@@ -55,6 +55,7 @@ def run_command(command, commands_file, errors_file):
 def run_synthesis(file, compiler_settings, output_dir, synth_file_flag, device_fla, commands_file, errors_file):
     # big_json is a json that stores all of the resource estimates for this design 
     big_json = {}
+    full_resource_file = os.path.join(output_dir,"resource_numbers_" + simplify_file_name(file) + ".json")
     for compiler_setting in compiler_settings:
       start = time.time()
       # setting should be one of the settings_supported = ["default", "fully-inline", "no-infer-share"]
@@ -67,7 +68,8 @@ def run_synthesis(file, compiler_settings, output_dir, synth_file_flag, device_f
         settings_flag += ' -d infer-share' 
       elif setting == "fully-inline":
         settings_flag += ' -x inline:always -x inline:new-fsms' 
-      big_json[setting] = {}
+      if setting not in big_json:
+        big_json[setting] = {}
       # bounds should be a 3 element list of bounds, e.g. [1,4,4]
       bounds = compiler_setting[1]
        
@@ -100,9 +102,9 @@ def run_synthesis(file, compiler_settings, output_dir, synth_file_flag, device_f
       time_consumed=end-start
       time_str = run_info + ": " + str(time_consumed/60) + " minutes"
       write_to_file(timing_file, time_str)
-    
-    full_resource_file = os.path.join(output_dir,"resource_numbers_" + simplify_file_name(file) + ".json")
-    write_to_file(full_resource_file, json.dumps(big_json))
+      
+      with open (full_resource_file, "w") as frf:
+        frf.write(json.dumps(big_json))
 
 if __name__ == "__main__":
   assert (len(sys.argv) == 2), "please provide an input json file name"

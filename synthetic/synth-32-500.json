@@ -1,5 +1,5 @@
 {
-  "file": "synthetic/synth-32-500.futil",
+  "file": "synthetic/synthetic-no-const.futil",
   "compiler-settings": [
     [
       "default",
@@ -202,7 +202,7 @@
       ]
     ]
   ],
-  "output-dir": "synthetic-results/32-500",
+  "output-dir": "synthetic-results/no-const",
   "synth-file": "synth.tcl",
   "device": "device10.xdc"
 }

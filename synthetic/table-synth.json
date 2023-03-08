@@ -1,6 +1,6 @@
 {
   "files": [
-    "most-synthetic-results/32-500/synth-results.json"
+    "synthetic-results/no-const/resource_numbers_synthetic_synthetic-no-const_futil.json"
   ],
   "stats": [
     "registers",
@@ -17,5 +17,5 @@
     "worst_slack"
   ],
   "output_path": "synth-exp-tables",
-  "output_file": "key-stats-table.csv"
+  "output_file": "no-const-table.csv"
 }
