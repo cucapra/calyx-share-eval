@@ -1,26 +1,10 @@
 {
-  "file": "synthetic/synth-32-500.futil",
+  "file": "synthetic/synthetic-no-const.futil",
   "compiler-settings": [
     [
       "default",
       [
         1,
-        32,
-        1
-      ]
-    ],
-    [
-      "default",
-      [
-        8,
-        -1,
-        1
-      ]
-    ],
-    [
-      "default",
-      [
-        32,
         1,
         1
       ]
@@ -28,52 +12,20 @@
     [
       "default",
       [
-        32,
-        128,
-        1
-      ]
-    ],
-    [
-      "default",
-      [
-        128,
         8,
+        32,
         1
       ]
     ],
     [
       "default",
       [
+        -1,
         128,
-        128,
-        1
-      ]
-    ],
-    [
-      "default",
-      [
-        128,
-        -1,
-        1
-      ]
-    ],
-    [
-      "default",
-      [
-        -1,
-        1,
-        1
-      ]
-    ],
-    [
-      "default",
-      [
-        -1,
-        -1,
         1
       ]
     ]
   ],
-  "results-path": "synthetic-simulation/32-500",
-  "input-data": "synthetic/input-32-500.json"
+  "results-path": "synthetic-simulation/no-const",
+  "input-data": "synthetic/synthetic-input-no-const.json"
 }

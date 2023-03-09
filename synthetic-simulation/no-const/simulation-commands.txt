@@ -1,0 +1,6 @@
+fud e synthetic/synthetic-no-const.futil -s verilog.data synthetic/synthetic-input-no-const.json --to dat --through verilog -v -o synthetic-simulation/no-const/sim-results/synthetic_synthetic-no-const_futil_default_1_1_1.json
+
+fud e synthetic/synthetic-no-const.futil -s verilog.data synthetic/synthetic-input-no-const.json --to dat --through verilog -v -o synthetic-simulation/no-const/sim-results/synthetic_synthetic-no-const_futil_default_8_32_1.json
+
+fud e synthetic/synthetic-no-const.futil -s verilog.data synthetic/synthetic-input-no-const.json --to dat --through verilog -v -o synthetic-simulation/no-const/sim-results/synthetic_synthetic-no-const_futil_default_-1_128_1.json
+
