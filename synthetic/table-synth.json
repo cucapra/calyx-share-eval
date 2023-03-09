@@ -4,6 +4,7 @@
   ],
   "stats": [
     "registers",
+    "carry8",
     "lut",
     "cell_lut1",
     "cell_lut2",
