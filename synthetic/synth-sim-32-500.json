@@ -1,5 +1,5 @@
 {
-  "file": "synthetic/synthetic-no-const.futil",
+  "file": "synthetic/no-cheating.futil",
   "compiler-settings": [
     [
       "default",
@@ -26,6 +26,6 @@
       ]
     ]
   ],
-  "results-path": "synthetic-simulation/no-const",
-  "input-data": "synthetic/synthetic-input-no-const.json"
+  "results-path": "synthetic-simulation/no-cheating",
+  "input-data": "synthetic/input-synth.json"
 }

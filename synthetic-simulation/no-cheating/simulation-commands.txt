@@ -1,0 +1,6 @@
+fud e synthetic/no-cheating.futil -s verilog.data synthetic/input-synth.json -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=1,1,1" --to dat --through verilog -v -o synthetic-simulation/no-cheating/sim-results/synthetic_no-cheating_futil_default_1_1_1.json
+
+fud e synthetic/no-cheating.futil -s verilog.data synthetic/input-synth.json -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=8,32,1" --to dat --through verilog -v -o synthetic-simulation/no-cheating/sim-results/synthetic_no-cheating_futil_default_8_32_1.json
+
+fud e synthetic/no-cheating.futil -s verilog.data synthetic/input-synth.json -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=-1,128,1" --to dat --through verilog -v -o synthetic-simulation/no-cheating/sim-results/synthetic_no-cheating_futil_default_-1_128_1.json
+

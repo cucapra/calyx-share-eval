@@ -43,7 +43,7 @@ def run_simulation(file, input_data, compiler_settings, simulation_results, comm
     results_file = os.path.join(simulation_results, run_info + ".json")
             
     # first get synth_files (they can be helpful to look at)
-    run_command(f"fud e {file} -s verilog.data {input_data} --to dat --through verilog -v -o {results_file}", commands_file, errors_file)  
+    run_command(f"fud e {file} -s verilog.data {input_data} {futil_flags} --to dat --through verilog -v -o {results_file}", commands_file, errors_file)  
     
     end = time.time()
     time_consumed=end-start
