@@ -1,0 +1,100 @@
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_1_1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=1,1,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_1_1_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_1_1_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_1_8_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=1,8,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_1_8_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_1_8_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_1_32_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=1,32,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_1_32_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_1_32_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_1_128_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=1,128,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_1_128_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_1_128_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_1_-1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=1,-1,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_1_-1_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_1_-1_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_8_1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=8,1,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_8_1_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_8_1_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_8_8_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=8,8,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_8_8_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_8_8_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_8_32_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=8,32,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_8_32_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_8_32_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_8_128_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=8,128,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_8_128_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_8_128_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_8_-1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=8,-1,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_8_-1_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_8_-1_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_32_1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=32,1,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_32_1_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_32_1_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_32_8_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=32,8,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_32_8_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_32_8_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_32_32_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=32,32,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_32_32_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_32_32_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_32_128_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=32,128,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_32_128_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_32_128_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_32_-1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=32,-1,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_32_-1_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_32_-1_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_128_1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=128,1,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_128_1_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_128_1_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_128_8_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=128,8,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_128_8_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_128_8_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_128_32_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=128,32,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_128_32_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_128_32_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_128_128_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=128,128,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_128_128_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_128_128_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_128_-1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=128,-1,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_128_-1_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_128_-1_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_-1_1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=-1,1,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_-1_1_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_-1_1_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_-1_8_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=-1,8,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_-1_8_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_-1_8_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_-1_32_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=-1,32,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_-1_32_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_-1_32_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_-1_128_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=-1,128,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_-1_128_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_-1_128_1.json
+
+fud e --to synth-files synthetic/no-cheating.futil -o synthetic-results/no-cheating/synthetic_no-cheating_futil_default_-1_-1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=-1,-1,1"
+
+fud e --to resource-estimate --from synth-files synthetic-results/no-cheating/synthetic_no-cheating_futil_default_-1_-1_1 > synthetic-results/no-cheating/resource-estimates/synthetic_no-cheating_futil_default_-1_-1_1.json
+

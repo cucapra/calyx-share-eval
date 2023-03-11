@@ -18829,6 +18829,8 @@ component main() -> () {
         write_my_reg_right_49;
         write_reg_49;
         write_mem_49;
+      }
+      @new_fsm seq {
         prime_left_mem_50;
         write_my_reg_left_50;
         prime_right_mem_50;
@@ -19431,6 +19433,8 @@ component main() -> () {
         write_my_reg_right_149;
         write_reg_149;
         write_mem_149;
+      }
+      @new_fsm seq {
         prime_left_mem_150;
         write_my_reg_left_150;
         prime_right_mem_150;
@@ -20033,6 +20037,8 @@ component main() -> () {
         write_my_reg_right_249;
         write_reg_249;
         write_mem_249;
+      }
+      @new_fsm seq {
         prime_left_mem_250;
         write_my_reg_left_250;
         prime_right_mem_250;
@@ -20635,6 +20641,8 @@ component main() -> () {
         write_my_reg_right_349;
         write_reg_349;
         write_mem_349;
+      }
+      @new_fsm seq {
         prime_left_mem_350;
         write_my_reg_left_350;
         prime_right_mem_350;
@@ -21237,6 +21245,8 @@ component main() -> () {
         write_my_reg_right_449;
         write_reg_449;
         write_mem_449;
+      }
+      @new_fsm seq {
         prime_left_mem_450;
         write_my_reg_left_450;
         prime_right_mem_450;
