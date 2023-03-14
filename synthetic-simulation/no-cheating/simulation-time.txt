@@ -1,3 +1,2 @@
-synthetic_no-cheating_futil_default_1_1_1: 6.867616951465607 minutes
-synthetic_no-cheating_futil_default_8_32_1: 5.907957434654236 minutes
-synthetic_no-cheating_futil_default_-1_128_1: 5.610901204744975 minutes
+synthetic_no-cheating_futil_default_1_1_1: 0.024720994631449382 minutes
+synthetic_no-cheating_futil_default_8_32_1: 0.022988033294677735 minutes
