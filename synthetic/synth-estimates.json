@@ -1,5 +1,5 @@
 {
-  "file": "synthetic/no-cheating.futil",
+  "file": "synthetic/no-cheating-4.futil",
   "compiler-settings": [
     [
       "default",
@@ -202,7 +202,7 @@
       ]
     ]
   ],
-  "output-dir": "synthetic-results/no-cheating",
+  "output-dir": "synthetic-results/no-cheating-4",
   "synth-file": "synth.tcl",
   "device": "device10.xdc"
 }

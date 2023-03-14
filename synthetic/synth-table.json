@@ -1,6 +1,6 @@
 {
   "files": [
-    "synthetic-results/no-const/resource_numbers_synthetic_synthetic-no-const_futil.json"
+    "synthetic-results/no-cheating-4/resource_numbers_synthetic_no-cheating-4_futil.json"
   ],
   "stats": [
     "registers",
@@ -18,5 +18,5 @@
     "worst_slack"
   ],
   "output_path": "synth-exp-tables",
-  "output_file": "no-const-table.csv"
+  "output_file": "no-cheating-4-bit-table.csv"
 }
