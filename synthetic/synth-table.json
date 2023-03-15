@@ -1,6 +1,6 @@
 {
   "files": [
-    "synthetic-results/one-fsm/resource_numbers_synthetic_one-fsm_futil.json"
+    "synthetic-results/one-fsm-32/resource_numbers_synthetic_one-fsm-32_futil.json"
   ],
   "stats": [
     "registers",
@@ -18,5 +18,5 @@
     "worst_slack"
   ],
   "output_path": "synth-exp-tables",
-  "output_file": "no-cheating-one-fsm-table.csv"
+  "output_file": "no-cheating-one-fsm-32-table.csv"
 }

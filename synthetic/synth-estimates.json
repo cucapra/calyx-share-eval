@@ -1,5 +1,5 @@
 {
-  "file": "synthetic/one-fsm.futil",
+  "file": "synthetic/one-fsm-32.futil",
   "compiler-settings": [
     [
       "default",
@@ -202,7 +202,7 @@
       ]
     ]
   ],
-  "output-dir": "synthetic-results/one-fsm",
+  "output-dir": "synthetic-results/one-fsm-32",
   "synth-file": "synth.tcl",
   "device": "device10.xdc"
 }
