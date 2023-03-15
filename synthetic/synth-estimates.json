@@ -1,5 +1,5 @@
 {
-  "file": "synthetic/no-cheating-4.futil",
+  "file": "synthetic/one-fsm.futil",
   "compiler-settings": [
     [
       "default",
@@ -202,7 +202,7 @@
       ]
     ]
   ],
-  "output-dir": "synthetic-results/no-cheating-4",
+  "output-dir": "synthetic-results/one-fsm",
   "synth-file": "synth.tcl",
   "device": "device10.xdc"
 }

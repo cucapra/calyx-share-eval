@@ -1,11 +1,11 @@
 {
-  "file": "synthetic/no-cheating-4.futil",
+  "file": "synthetic/one-fsm.futil",
   "compiler-settings": [
     [
       "default",
       [
         32,
-        128,
+        32,
         1
       ]
     ]
