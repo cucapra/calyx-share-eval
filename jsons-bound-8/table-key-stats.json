@@ -1,0 +1,17 @@
+{
+  "files": [
+    "results/alex/resource_numbers_alex.json",
+    "results/google/resource_numbers_google.json",
+    "results/lenet/resource_numbers_lenet.json",
+    "results/mobile/resource_numbers_mobile.json",
+    "results/squeeze/resource_numbers_squeeze.json",
+    "results/vgg/resource_numbers_vgg.json"
+  ],
+  "stats": [
+    "lut",
+    "dsp",
+    "registers"
+  ],
+  "output_path": "tables",
+  "output_file": "key-stats-table.csv"
+}

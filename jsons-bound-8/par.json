@@ -1,0 +1,10 @@
+{
+  "files": [
+    "jsons-bound-8/alex.json",
+    "jsons-bound-8/google.json",
+    "jsons-bound-8/lenet.json",
+    "jsons-bound-8/mobile.json",
+    "jsons-bound-8/squeeze.json",
+    "jsons-bound-8/vgg.json"
+  ]
+}

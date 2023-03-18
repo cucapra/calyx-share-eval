@@ -1,0 +1,80 @@
+{
+  "file": "nn-designs/vgg.futil",
+  "compiler-settings": [
+    [
+      "no-infer-share",
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      "no-infer-share",
+      [
+        8,
+        8,
+        8
+      ]
+    ],
+    [
+      "no-infer-share",
+      [
+        -1,
+        -1,
+        -1
+      ]
+    ],
+    [
+      "default",
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      "default",
+      [
+        8,
+        8,
+        8
+      ]
+    ],
+    [
+      "default",
+      [
+        -1,
+        -1,
+        -1
+      ]
+    ],
+    [
+      "fully-inline",
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      "fully-inline",
+      [
+        8,
+        8,
+        8
+      ]
+    ],
+    [
+      "fully-inline",
+      [
+        -1,
+        -1,
+        -1
+      ]
+    ]
+  ],
+  "output-dir": "results/vgg",
+  "synth-file": "synth.tcl",
+  "device": "device10.xdc"
+}

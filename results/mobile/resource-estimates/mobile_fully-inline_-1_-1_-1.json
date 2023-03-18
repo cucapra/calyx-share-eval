@@ -1,5 +1,5 @@
 {
-  "lut": 23685,
+  "lut": 23679,
   "dsp": 10,
   "registers": 2533,
   "muxes": 1910,
@@ -8,9 +8,9 @@
   "f7_muxes": 0,
   "f8_muxes": 0,
   "f9_muxes": 0,
-  "clb": 27286,
+  "clb": 27280,
   "meet_timing": 1,
-  "worst_slack": 2.314,
+  "worst_slack": 2.548,
   "period": 10.0,
   "frequency": 100.0,
   "uram": -1,

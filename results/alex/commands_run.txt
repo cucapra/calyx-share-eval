@@ -2,9 +2,9 @@ fud e --to synth-files nn-designs/alex.futil -o results/alex/alex_no-infer-share
 
 fud e --to resource-estimate --from synth-files results/alex/alex_no-infer-share_1_1_1 > results/alex/resource-estimates/alex_no-infer-share_1_1_1.json
 
-fud e --to synth-files nn-designs/alex.futil -o results/alex/alex_no-infer-share_32_32_32 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -d infer-share -x cell-share:bounds=32,32,32"
+fud e --to synth-files nn-designs/alex.futil -o results/alex/alex_no-infer-share_8_8_8 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -d infer-share -x cell-share:bounds=8,8,8"
 
-fud e --to resource-estimate --from synth-files results/alex/alex_no-infer-share_32_32_32 > results/alex/resource-estimates/alex_no-infer-share_32_32_32.json
+fud e --to resource-estimate --from synth-files results/alex/alex_no-infer-share_8_8_8 > results/alex/resource-estimates/alex_no-infer-share_8_8_8.json
 
 fud e --to synth-files nn-designs/alex.futil -o results/alex/alex_no-infer-share_-1_-1_-1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -d infer-share -x cell-share:bounds=-1,-1,-1"
 
@@ -14,9 +14,9 @@ fud e --to synth-files nn-designs/alex.futil -o results/alex/alex_default_1_1_1 
 
 fud e --to resource-estimate --from synth-files results/alex/alex_default_1_1_1 > results/alex/resource-estimates/alex_default_1_1_1.json
 
-fud e --to synth-files nn-designs/alex.futil -o results/alex/alex_default_32_32_32 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=32,32,32"
+fud e --to synth-files nn-designs/alex.futil -o results/alex/alex_default_8_8_8 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=8,8,8"
 
-fud e --to resource-estimate --from synth-files results/alex/alex_default_32_32_32 > results/alex/resource-estimates/alex_default_32_32_32.json
+fud e --to resource-estimate --from synth-files results/alex/alex_default_8_8_8 > results/alex/resource-estimates/alex_default_8_8_8.json
 
 fud e --to synth-files nn-designs/alex.futil -o results/alex/alex_default_-1_-1_-1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=-1,-1,-1"
 
@@ -26,9 +26,9 @@ fud e --to synth-files nn-designs/alex.futil -o results/alex/alex_fully-inline_1
 
 fud e --to resource-estimate --from synth-files results/alex/alex_fully-inline_1_1_1 > results/alex/resource-estimates/alex_fully-inline_1_1_1.json
 
-fud e --to synth-files nn-designs/alex.futil -o results/alex/alex_fully-inline_32_32_32 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x inline:always -x inline:new-fsms -x cell-share:bounds=32,32,32"
+fud e --to synth-files nn-designs/alex.futil -o results/alex/alex_fully-inline_8_8_8 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x inline:always -x inline:new-fsms -x cell-share:bounds=8,8,8"
 
-fud e --to resource-estimate --from synth-files results/alex/alex_fully-inline_32_32_32 > results/alex/resource-estimates/alex_fully-inline_32_32_32.json
+fud e --to resource-estimate --from synth-files results/alex/alex_fully-inline_8_8_8 > results/alex/resource-estimates/alex_fully-inline_8_8_8.json
 
 fud e --to synth-files nn-designs/alex.futil -o results/alex/alex_fully-inline_-1_-1_-1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x inline:always -x inline:new-fsms -x cell-share:bounds=-1,-1,-1"
 
