@@ -1,5 +1,9 @@
-alex_no-infer-share_1_1_1: 16.29789170821508 minutes
-alex_no-infer-share_-1_-1_1: 16.87270141839981 minutes
-alex_no-infer-share_-1_-1_-1: 16.291528729597726 minutes
-alex_default_-1_-1_-1: 15.39710827668508 minutes
-alex_fully-inline_-1_-1_-1: 14.62461170355479 minutes
+alex_no-infer-share_1_1_1: 16.831805872917176 minutes
+alex_no-infer-share_32_32_32: 17.542930416266124 minutes
+alex_no-infer-share_-1_-1_-1: 17.383040209611256 minutes
+alex_default_1_1_1: 16.731292259693145 minutes
+alex_default_32_32_32: 16.75905817747116 minutes
+alex_default_-1_-1_-1: 17.042988574504854 minutes
+alex_fully-inline_1_1_1: 23.024581694602965 minutes
+alex_fully-inline_32_32_32: 15.547705209255218 minutes
+alex_fully-inline_-1_-1_-1: 13.528004372119904 minutes

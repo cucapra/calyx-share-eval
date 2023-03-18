@@ -1,5 +1,9 @@
-vgg_no-infer-share_1_1_1: 15.174239293734233 minutes
-vgg_no-infer-share_-1_-1_1: 15.196083362897237 minutes
-vgg_no-infer-share_-1_-1_-1: 15.463944705327352 minutes
-vgg_default_-1_-1_-1: 14.61724191904068 minutes
-vgg_fully-inline_-1_-1_-1: 9.424047780036926 minutes
+vgg_no-infer-share_1_1_1: 14.101212871074676 minutes
+vgg_no-infer-share_32_32_32: 17.291056100527445 minutes
+vgg_no-infer-share_-1_-1_-1: 16.149736885229746 minutes
+vgg_default_1_1_1: 14.332478094100953 minutes
+vgg_default_32_32_32: 17.715235491593678 minutes
+vgg_default_-1_-1_-1: 18.034734749794005 minutes
+vgg_fully-inline_1_1_1: 16.41408598423004 minutes
+vgg_fully-inline_32_32_32: 10.665568991502125 minutes
+vgg_fully-inline_-1_-1_-1: 9.69300810098648 minutes

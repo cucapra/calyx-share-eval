@@ -1,5 +1,9 @@
-google_no-infer-share_1_1_1: 61.243853040536244 minutes
-google_no-infer-share_-1_-1_1: 53.196653250853224 minutes
-google_no-infer-share_-1_-1_-1: 50.228911813100176 minutes
-google_default_-1_-1_-1: 42.5249907374382 minutes
-google_fully-inline_-1_-1_-1: 28.00068506002426 minutes
+google_no-infer-share_1_1_1: 54.583290394147234 minutes
+google_no-infer-share_32_32_32: 58.83851286967595 minutes
+google_no-infer-share_-1_-1_-1: 56.10202373663584 minutes
+google_default_1_1_1: 50.44064946571986 minutes
+google_default_32_32_32: 51.66214884916941 minutes
+google_default_-1_-1_-1: 49.76478862762451 minutes
+google_fully-inline_1_1_1: 63.07151673634847 minutes
+google_fully-inline_32_32_32: 38.792577707767485 minutes
+google_fully-inline_-1_-1_-1: 31.063037109375 minutes

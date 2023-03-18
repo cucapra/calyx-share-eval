@@ -2,17 +2,33 @@ fud e --to synth-files nn-designs/google.futil -o results/google/google_no-infer
 
 fud e --to resource-estimate --from synth-files results/google/google_no-infer-share_1_1_1 > results/google/resource-estimates/google_no-infer-share_1_1_1.json
 
-fud e --to synth-files nn-designs/google.futil -o results/google/google_no-infer-share_-1_-1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -d infer-share -x cell-share:bounds=-1,-1,1"
+fud e --to synth-files nn-designs/google.futil -o results/google/google_no-infer-share_32_32_32 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -d infer-share -x cell-share:bounds=32,32,32"
 
-fud e --to resource-estimate --from synth-files results/google/google_no-infer-share_-1_-1_1 > results/google/resource-estimates/google_no-infer-share_-1_-1_1.json
+fud e --to resource-estimate --from synth-files results/google/google_no-infer-share_32_32_32 > results/google/resource-estimates/google_no-infer-share_32_32_32.json
 
 fud e --to synth-files nn-designs/google.futil -o results/google/google_no-infer-share_-1_-1_-1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -d infer-share -x cell-share:bounds=-1,-1,-1"
 
 fud e --to resource-estimate --from synth-files results/google/google_no-infer-share_-1_-1_-1 > results/google/resource-estimates/google_no-infer-share_-1_-1_-1.json
 
+fud e --to synth-files nn-designs/google.futil -o results/google/google_default_1_1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=1,1,1"
+
+fud e --to resource-estimate --from synth-files results/google/google_default_1_1_1 > results/google/resource-estimates/google_default_1_1_1.json
+
+fud e --to synth-files nn-designs/google.futil -o results/google/google_default_32_32_32 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=32,32,32"
+
+fud e --to resource-estimate --from synth-files results/google/google_default_32_32_32 > results/google/resource-estimates/google_default_32_32_32.json
+
 fud e --to synth-files nn-designs/google.futil -o results/google/google_default_-1_-1_-1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=-1,-1,-1"
 
 fud e --to resource-estimate --from synth-files results/google/google_default_-1_-1_-1 > results/google/resource-estimates/google_default_-1_-1_-1.json
+
+fud e --to synth-files nn-designs/google.futil -o results/google/google_fully-inline_1_1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x inline:always -x inline:new-fsms -x cell-share:bounds=1,1,1"
+
+fud e --to resource-estimate --from synth-files results/google/google_fully-inline_1_1_1 > results/google/resource-estimates/google_fully-inline_1_1_1.json
+
+fud e --to synth-files nn-designs/google.futil -o results/google/google_fully-inline_32_32_32 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x inline:always -x inline:new-fsms -x cell-share:bounds=32,32,32"
+
+fud e --to resource-estimate --from synth-files results/google/google_fully-inline_32_32_32 > results/google/resource-estimates/google_fully-inline_32_32_32.json
 
 fud e --to synth-files nn-designs/google.futil -o results/google/google_fully-inline_-1_-1_-1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x inline:always -x inline:new-fsms -x cell-share:bounds=-1,-1,-1"
 
