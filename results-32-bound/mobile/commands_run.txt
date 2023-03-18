@@ -1,0 +1,36 @@
+fud e --to synth-files nn-designs/mobile.futil -o results/mobile/mobile_no-infer-share_1_1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -d infer-share -x cell-share:bounds=1,1,1"
+
+fud e --to resource-estimate --from synth-files results/mobile/mobile_no-infer-share_1_1_1 > results/mobile/resource-estimates/mobile_no-infer-share_1_1_1.json
+
+fud e --to synth-files nn-designs/mobile.futil -o results/mobile/mobile_no-infer-share_32_32_32 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -d infer-share -x cell-share:bounds=32,32,32"
+
+fud e --to resource-estimate --from synth-files results/mobile/mobile_no-infer-share_32_32_32 > results/mobile/resource-estimates/mobile_no-infer-share_32_32_32.json
+
+fud e --to synth-files nn-designs/mobile.futil -o results/mobile/mobile_no-infer-share_-1_-1_-1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -d infer-share -x cell-share:bounds=-1,-1,-1"
+
+fud e --to resource-estimate --from synth-files results/mobile/mobile_no-infer-share_-1_-1_-1 > results/mobile/resource-estimates/mobile_no-infer-share_-1_-1_-1.json
+
+fud e --to synth-files nn-designs/mobile.futil -o results/mobile/mobile_default_1_1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=1,1,1"
+
+fud e --to resource-estimate --from synth-files results/mobile/mobile_default_1_1_1 > results/mobile/resource-estimates/mobile_default_1_1_1.json
+
+fud e --to synth-files nn-designs/mobile.futil -o results/mobile/mobile_default_32_32_32 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=32,32,32"
+
+fud e --to resource-estimate --from synth-files results/mobile/mobile_default_32_32_32 > results/mobile/resource-estimates/mobile_default_32_32_32.json
+
+fud e --to synth-files nn-designs/mobile.futil -o results/mobile/mobile_default_-1_-1_-1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x cell-share:bounds=-1,-1,-1"
+
+fud e --to resource-estimate --from synth-files results/mobile/mobile_default_-1_-1_-1 > results/mobile/resource-estimates/mobile_default_-1_-1_-1.json
+
+fud e --to synth-files nn-designs/mobile.futil -o results/mobile/mobile_fully-inline_1_1_1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x inline:always -x inline:new-fsms -x cell-share:bounds=1,1,1"
+
+fud e --to resource-estimate --from synth-files results/mobile/mobile_fully-inline_1_1_1 > results/mobile/resource-estimates/mobile_fully-inline_1_1_1.json
+
+fud e --to synth-files nn-designs/mobile.futil -o results/mobile/mobile_fully-inline_32_32_32 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x inline:always -x inline:new-fsms -x cell-share:bounds=32,32,32"
+
+fud e --to resource-estimate --from synth-files results/mobile/mobile_fully-inline_32_32_32 > results/mobile/resource-estimates/mobile_fully-inline_32_32_32.json
+
+fud e --to synth-files nn-designs/mobile.futil -o results/mobile/mobile_fully-inline_-1_-1_-1 -s synth-verilog.tcl synth.tcl -s synth-verilog.constraints device10.xdc -s futil.flags " -d group2invoke -d tdst  -x inline:always -x inline:new-fsms -x cell-share:bounds=-1,-1,-1"
+
+fud e --to resource-estimate --from synth-files results/mobile/mobile_fully-inline_-1_-1_-1 > results/mobile/resource-estimates/mobile_fully-inline_-1_-1_-1.json
+
