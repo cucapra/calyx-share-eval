@@ -16,7 +16,7 @@ sns.set_theme()
 # currently supported settings 
 supported_designs = ["alex", "google", "lenet", "mobile", "squeeze", "vgg"]
 acronyms = ["vgg", "lut", "dsp"]
-bounds = ["1", "32", "None"]
+bounds = ["1", "8", "None"]
 compiler_settings = ["No Component Sharing", "Component Sharing", "Fully Inline"]
 
 def format_word(s):
@@ -84,7 +84,7 @@ if __name__ == "__main__":
     sns.move_legend(ax, "upper right", bbox_to_anchor=(1.1, 1))
     
     # can save figure if we want 
-    # fig.savefig('resource_graph', bbox_inches='tight')
+    # fig.savefig(f"""graphs-bounded-sharing/{format_design_name(design)}_{format(resource, "_")}_usage""", bbox_inches='tight')
     
     plt.show()
           
