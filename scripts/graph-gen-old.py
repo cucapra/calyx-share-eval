@@ -18,7 +18,7 @@ sns.set_theme()
 #         'size'   : 20}
 
 # matplotlib.rc('font', **font)
-sns.set(font_scale=1.15)
+sns.set(font_scale=1.24)
 
 # currently supported settings 
 supported_designs = ["alex", "google", "lenet", "mobile", "squeeze", "vgg"]
@@ -80,7 +80,7 @@ if __name__ == "__main__":
           
     df = pd.DataFrame(data, columns=['Compiler Setting', 'Share Bound', f"{resource_formatted} Usage"])
     # Set the figure size
-    fig = plt.figure(figsize=(8, 8))
+    fig = plt.figure(figsize=(9, 8))
     fig.add_axes([0.1, 0.1, 0.65, 0.85])
     
     # order = compiler_settings,
@@ -89,8 +89,11 @@ if __name__ == "__main__":
     ax = sns.barplot(x="Compiler Setting", y=f"""{resource_formatted} Usage""", hue="Share Bound", order = compiler_settings, data=df, errorbar=None)
     
     # ax.set(title=f"""{resource_formatted} Usage on {format_design_name(design)}""")
-    
-    sns.move_legend(ax, "upper right", bbox_to_anchor=(1.35, 1), fontsize = 18)
+    legend = False 
+    if legend:
+      sns.move_legend(ax, "upper right", bbox_to_anchor=(1.4, 1), fontsize = 25)
+    else:
+      plt.legend([],[], frameon=False)
     
     
     # can save figure if we want 
