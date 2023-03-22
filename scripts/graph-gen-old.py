@@ -7,16 +7,23 @@ import os
 import sys 
 import json 
 import matplotlib.pyplot as plt
+import matplotlib
 import numpy as np 
 import seaborn as sns
 import pandas as pd 
 
 sns.set_theme()
+# font = {'family' : 'sans-serif',
+#         'weight' : 'bold',
+#         'size'   : 20}
+
+# matplotlib.rc('font', **font)
+sns.set(font_scale=1.15)
 
 # currently supported settings 
 supported_designs = ["alex", "google", "lenet", "mobile", "squeeze", "vgg"]
 acronyms = ["vgg", "lut", "dsp"]
-bounds = ["1", "8", "None"]
+bounds = ["1        ", "8       ", "Unbounded"]
 compiler_settings = ["No Component Sharing", "Component Sharing", "Fully Inline"]
 
 def format_word(s):
@@ -67,9 +74,11 @@ if __name__ == "__main__":
       resource_name = "_".join(row[0].split("_")[1:])
       if design == design_name and resource == resource_name: 
         add_data(data, row, format_design_name(design_name))
-
+        
+    
+    resource_formatted = format(resource, "_")
           
-    df = pd.DataFrame(data, columns=['Compiler Setting', 'Share Bound', 'Usage'])
+    df = pd.DataFrame(data, columns=['Compiler Setting', 'Share Bound', f"{resource_formatted} Usage"])
     # Set the figure size
     fig = plt.figure(figsize=(8, 8))
     fig.add_axes([0.1, 0.1, 0.65, 0.85])
@@ -77,14 +86,15 @@ if __name__ == "__main__":
     # order = compiler_settings,
 
     # grouped barplot
-    ax = sns.barplot(x="Compiler Setting", y="Usage", hue="Share Bound", order = compiler_settings, data=df, errorbar=None)
+    ax = sns.barplot(x="Compiler Setting", y=f"""{resource_formatted} Usage""", hue="Share Bound", order = compiler_settings, data=df, errorbar=None)
     
-    ax.set(title=f"""{format(resource, "_")} Usage on {format_design_name(design)}""")
+    # ax.set(title=f"""{resource_formatted} Usage on {format_design_name(design)}""")
     
-    sns.move_legend(ax, "upper right", bbox_to_anchor=(1.1, 1))
+    sns.move_legend(ax, "upper right", bbox_to_anchor=(1.35, 1), fontsize = 18)
+    
     
     # can save figure if we want 
-    # fig.savefig(f"""graphs-bounded-sharing/{format_design_name(design)}_{format(resource, "_")}_usage""", bbox_inches='tight')
+    fig.savefig(f"""graphs-bounded-sharing-vert/{format_design_name(design)}_{format(resource, "_")}_usage""", bbox_inches='tight')
     
     plt.show()
           
