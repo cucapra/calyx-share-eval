@@ -18,7 +18,7 @@ sns.set_theme()
 #         'size'   : 20}
 
 # matplotlib.rc('font', **font)
-sns.set(font_scale=1.24)
+plt.rcParams['legend.title_fontsize'] = 24
 
 # currently supported settings 
 supported_designs = ["alex", "google", "lenet", "mobile", "squeeze", "vgg"]
@@ -91,9 +91,13 @@ if __name__ == "__main__":
     # ax.set(title=f"""{resource_formatted} Usage on {format_design_name(design)}""")
     legend = False 
     if legend:
-      sns.move_legend(ax, "upper right", bbox_to_anchor=(1.4, 1), fontsize = 25)
+      #sns.move_legend(ax, "upper right", bbox_to_anchor=(1.4, 1), fontsize = 24)
+      plt.legend(title="Sharing Bound", fontsize=24, bbox_to_anchor=(1.4, 1))
     else:
       plt.legend([],[], frameon=False)
+    
+    plt.xlabel("Compiler Setting", fontsize = 24)
+    plt.ylabel(f"""{resource_formatted} Usage""", fontsize = 24)
     
     
     # can save figure if we want 

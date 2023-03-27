@@ -54,7 +54,7 @@ def add_data(data, row):
 if __name__ == "__main__":
     assert (len(sys.argv) == 2), "please provide a resource name"
     resource_name = sys.argv[1]
-    df = pd.read_csv("synth-exp-tables/no-cheating-table.csv")
+    df = pd.read_csv("synth-exp-tables/no-cheating-one-fsm-32-table.csv")
     data = []
     for _,row in df.iterrows():
       info = row[0].split("_")
