@@ -13,6 +13,7 @@ import seaborn as sns
 import pandas as pd
 
 sns.set_theme()
+sns.set(font_scale=1.7)
 
 # currently supported settings
 supported_designs = ["alex", "google", "lenet", "mobile", "squeeze", "vgg"]
@@ -50,7 +51,7 @@ def format(s, space_replacement):
 
 def add_data(data, row, design):
     data.append([design, "No Sharing", row[1]])
-    data.append([design, "Just Share Registers", row[3]])
+    data.append([design, "Share Just Registers", row[3]])
     # data.append([design, "Share All Primitives", row[3]])
     data.append([design, "Share All Components", row[6]])
     # data.append([design, "Fully Inline", row[5]])
@@ -70,6 +71,7 @@ if __name__ == "__main__":
     df = pd.DataFrame(data, columns=["Design", "Share Setting", "Usage"])
     # Set the figure size
     fig = plt.figure(figsize=(8, 8))
+
     fig.add_axes([0.1, 0.1, 0.65, 0.85])
 
     # order = ["No Sharing", "Share Registers and Combinational", "Share All Primitives", "Share All Components", "Fully Inline and Share"]
@@ -78,6 +80,7 @@ if __name__ == "__main__":
     ax = sns.barplot(x="Design", y="Usage", hue="Share Setting", data=df, errorbar=None)
 
     ax.set(title=f"""{format(resource_name, "_")} Usage""")
+    ax.tick_params(axis="x", rotation=90)
 
     sns.move_legend(ax, "upper right", bbox_to_anchor=(1.3, 1))
 
